@@ -1,0 +1,11 @@
+{% set drupalrs_block = 'view-' ~ view.storage.id()|clean_class ~ '-' ~ view.current_display|clean_class %}
+{% set drupalrs_element = drupalrs_block ~ '__summary' %}
+<ul class="{{ drupalrs_element }}">
+  {% for row in rows %}
+    <li class="{{ drupalrs_element }}-item"><a href="{{ row.url }}"{{ row.attributes.addClass(drupalrs_element ~ '-item-link', row.active ? 'is-active')|without('href') }}>{{ row.link }}</a>
+      {% if options.count %}
+        <span class="{{ drupalrs_element }}-item-count">({{ row.count }})</span>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

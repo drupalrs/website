@@ -1,0 +1,63 @@
+{%
+  set drupalrs_block = 'view-' ~ id|clean_class ~ '-' ~ display_id|clean_class
+%}
+{%
+  set classes = [
+    drupalrs_block,
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if title %}
+    {{ title }}
+  {% endif %}
+  {{ title_suffix }}
+  {% if header %}
+    <div class="{{ drupalrs_block }}__header">
+      {{ header }}
+    </div>
+  {% endif %}
+  {% if exposed %}
+    <div class="{{ drupalrs_block }}__filters">
+      {{ exposed }}
+    </div>
+  {% endif %}
+  {% if attachment_before %}
+    <div class="{{ drupalrs_block }}__attachment {{ drupalrs_block }}__attachment--before">
+      {{ attachment_before }}
+    </div>
+  {% endif %}
+
+  {% if rows %}
+    <div class="{{ drupalrs_block }}__content">
+      {{ rows }}
+    </div>
+  {% elseif empty %}
+    <div class="{{ drupalrs_block }}__content {{ drupalrs_block }}__content--empty">
+      {{ empty }}
+    </div>
+  {% endif %}
+
+  {% if pager %}
+    {{ pager }}
+  {% endif %}
+  {% if attachment_after %}
+    <div class="{{ drupalrs_block }}__attachment {{ drupalrs_block }}__attachment--after">
+      {{ attachment_after }}
+    </div>
+  {% endif %}
+  {% if more %}
+    {{ more }}
+  {% endif %}
+  {% if footer %}
+    <div class="{{ drupalrs_block }}__footer">
+      {{ footer }}
+    </div>
+  {% endif %}
+  {% if feed_icons %}
+    <div class="{{ drupalrs_block }}__feed-icons">
+      {{ feed_icons }}
+    </div>
+  {% endif %}
+</div>

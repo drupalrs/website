@@ -1,0 +1,34 @@
+.breadcrumb {
+  padding: 0 16px;
+  @media #{$Wide} {
+    padding: 0;
+  }
+  &__list {
+    margin: 36px 0 0 0;
+    padding: 0;
+  }
+  &__item {
+    display: inline;
+    color: rgba($color-blue, 0.75);
+    font-size: 13px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    &:before {
+      content: ' \BB ';
+    }
+    &:first-child:before {
+      content: none;
+    }
+    &:last-child {
+      a {
+        pointer-events: none;
+        cursor: default;
+        font-weight: 500;
+      }
+    }
+  }
+  &__item-link {
+    font-size: $size-breadcrumb;
+  }
+}

@@ -1,0 +1,32 @@
+{% set drupalrs_block = drupalrs_block ?: ('node-' ~ node.bundle ~ (view_mode != 'default' ? '-' ~ view_mode))|clean_class %}
+{% set classes = [
+drupalrs_block,
+node.isPromoted() ? drupalrs_block ~ '--promoted',
+node.isSticky() ? drupalrs_block ~ '--sticky',
+not node.isPublished() ? drupalrs_block ~ '--unpublished',
+] %}
+<a class="{{ drupalrs_block }}__title-link" href="{{ url }}" rel="bookmark">
+  <article{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div{{ content_attributes.addClass(drupalrs_block ~ '__content') }}>
+        {{ title_prefix }}
+        {% if not page %}
+          <h2{{ title_attributes.addClass(drupalrs_block ~ '__title') }}>
+            {{ label }}
+          </h2>
+        {% endif %}
+        {{ title_suffix }}
+        {{ content.field_tagovi_poslovi }} {# Skills. #}
+        {% set text = content.body|render|striptags %}
+        <div class="{{ drupalrs_block }}__body">
+          {{ text|length > 250 ? text|slice(0, 250) ~ '...' : text }}
+        </div>
+        {{ content.field_kompanija }}
+        {% if (content.field_tip|render|striptags|trim == "Ponuda usluge") %}
+          <div class="{{ drupalrs_block }}__field-user"> {{ author_name|render|striptags|trim }} </div>
+        {% endif %}
+        {{ content.field_adresa }}
+      </div>
+    {% endblock %}
+  </article>
+</a>

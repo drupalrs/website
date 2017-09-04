@@ -1,0 +1,18 @@
+%button {
+  a {
+    color: white;
+    background-color: $color-red;
+    font-size: 13px;
+    width: 150px;
+    margin: 24px auto 8px;
+    text-align: center;
+    display: block;
+    padding: 12px 0;
+    font-weight: 500;
+    border-radius: 3px;
+    &:hover {
+      text-decoration: none;
+      background-color: darken($color-red, 5%);
+    }
+  }
+}

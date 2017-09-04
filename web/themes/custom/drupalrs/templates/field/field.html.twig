@@ -1,0 +1,50 @@
+{% if not drupalrs %}
+  {% if view_mode == '_custom' %}
+    {% set drupalrs = 'field-' ~ field_name|replace({'__': '-'})|clean_class %}
+    {% set drupalrs_element_prefix = drupalrs ~ '__' %}
+  {% else %}
+    {% set drupalrs = (entity_type ~ '-' ~ bundle ~ (view_mode != 'default' ? '-' ~ view_mode))|clean_class ~ '__' ~ field_name|replace({(bundle ~ '__'): ''})|clean_class %}
+  {% endif %}
+{% endif %}
+{% set drupalrs_element_prefix = drupalrs_element_prefix ?: drupalrs ~ '-' %}
+{%
+  set classes = classes ?: [
+    drupalrs
+  ]
+%}
+{%
+  set title_classes = [
+    drupalrs_element_prefix ~ 'label',
+    label_hidden ? 'visually-hidden',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {% block content %}
+    {% block label %}
+      {% if not label_hidden %}
+        <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+      {% endif %}
+    {% endblock %}
+    {% block items %}
+      {% set content_attributes_not_empty -%}{{ content_attributes }}{%- endset %}
+      {% if (multiple and not label_hidden) or content_attributes_not_empty %}
+        <div{{ content_attributes.addClass(drupalrs_element_prefix ~ 'items') }}>
+      {% endif %}
+      {% for item in items %}
+        {% block item %}
+          {% set item_attributes_not_empty -%}{{ item.attributes }}{%- endset %}
+          {% if multiple or item_attributes_not_empty %}
+            <div{{ item.attributes.addClass(drupalrs_element_prefix ~ 'item') }}>
+          {% endif -%}
+          {{- item.content -}}
+          {% if multiple or item_attributes_not_empty %}
+            </div>
+          {% endif -%}
+        {% endblock %}
+      {% endfor %}
+      {% if (multiple and not label_hidden) or content_attributes_not_empty %}
+        </div>
+      {% endif %}
+    {% endblock %}
+  {% endblock %}
+</div>

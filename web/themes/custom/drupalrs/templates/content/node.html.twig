@@ -1,0 +1,42 @@
+{%
+set drupalrs_block = drupalrs_block ?: ('node-' ~ node.bundle ~ (view_mode != 'default' ? '-' ~ view_mode))|clean_class
+%}
+{%
+set classes = [
+drupalrs_block,
+node.isPromoted() ? drupalrs_block ~ '--promoted',
+node.isSticky() ? drupalrs_block ~ '--sticky',
+not node.isPublished() ? drupalrs_block ~ '--unpublished',
+]
+%}
+<article{{ attributes.addClass(classes) }}>
+    {% block content %}
+
+        {% if display_submitted %}
+          <footer class="{{ drupalrs_block }}__meta">
+            <div{{ author_attributes.addClass(drupalrs_block ~ '__submitted') }}>
+                {{ date }}
+                {{ metadata }}
+                {{ author_name }}
+            </div>
+          </footer>
+        {% endif %}
+
+      <div{{ content_attributes.addClass(drupalrs_block ~ '__content') }}>
+          {{ title_prefix }}
+          {% if not page %}
+              <h2{{ title_attributes.addClass(drupalrs_block ~ '__title') }}>
+                  <a class="{{ drupalrs_block }}__title-link" href="{{ url }}" rel="bookmark">{{ label }}</a>
+              </h2>
+          {% endif %}
+          {{ title_suffix }}
+          {{ content|without('links') }}
+      </div>
+
+        {% if content.links %}
+          <div class="{{ drupalrs_block }}__links">
+              {{ content.links }}
+          </div>
+        {% endif %}
+    {% endblock %}
+</article>

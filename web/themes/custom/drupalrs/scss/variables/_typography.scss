@@ -1,0 +1,28 @@
+//== fonts
+@import 'https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,700,700i&subset=latin-ext';
+@import 'https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i&subset=latin-ext';
+
+$ubuntu: 'Ubuntu', sans-serif;
+$merriweather: 'Merriweather', serif;
+$body-font: $ubuntu;
+$header-font: $merriweather;
+
+//== heading sizes
+
+$size-font: 14px;
+$size-h1: 25px;
+$size-h2: 20px;
+$size-h3: 18px;
+$size-h4: 16px;
+$size-h5: 14px;
+$size-h6: 12px;
+$size-breadcrumb: 13px;
+
+$size-mob-font: 14px;
+$size-mob-h1: 25px;
+$size-mob-h2: 20px;;
+$size-mob-h3: 18px;
+$size-mob-h4: 16px;
+$size-mob-h5: 14px;
+$size-mob-h6: 12px;
+$size-mob-breadcrumb: 13px;

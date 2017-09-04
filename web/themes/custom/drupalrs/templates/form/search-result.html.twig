@@ -1,0 +1,13 @@
+{{ title_prefix }}
+<h3{{ title_attributes.addClass('search-result__title') }}>
+  <a href="{{ url }}" class="search-result__title-link">{{ title }}</a>
+</h3>
+{{ title_suffix }}
+<div>
+  {% if snippet %}
+    <p{{ content_attributes.addClass('search-result__snippet')  }}>{{ snippet }}</p>
+  {% endif %}
+  {% if info_split %}
+    <p class="search-result__info">{{ info_split.date }}</p>
+  {% endif %}
+</div>

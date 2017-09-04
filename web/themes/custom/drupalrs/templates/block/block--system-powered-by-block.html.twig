@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - module: The module that provided this block plugin.
+ *   - cache: The cache settings.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+{% set drupalrs_block = 'block block-' ~ id|split('__', 2)|first|clean_class %}
+{% set drupalrs_modifiers = id|split('__')|slice(1) %}
+{%
+set classes = [
+drupalrs_block
+]
+%}
+{% for modifier in drupalrs_modifiers %}
+    {% set classes = classes|merge([drupalrs_block ~ '--' ~ modifier|clean_class]) %}
+{% endfor %}
+<div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+        <h2{{ title_attributes.addClass(drupalrs_block ~ '__title block-title') }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+        <div class="block-poweredbydrupal__content">
+        {% trans %}
+        Made in <a class="block-poweredbydrupal__drupicon" href="https://www.drupal.org">Drupal</a> w/ <span class="block-poweredbydrupal__love">love</span> by <a class="block-poweredbydrupal__studio-present" href="https://www.studiopresent.com">SP</a>
+        {% endtrans %}
+        </div>
+    {% endblock %}
+</div>
+

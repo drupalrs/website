@@ -1,0 +1,328 @@
+input {
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+}
+
+//== form label
+%form-label {
+  display: block;
+  font-weight: 500;
+  margin: 15px 0 4px;
+  color: $color-text;
+}
+
+//== placeholder
+placeholder {
+  color: $color-text;
+}
+
+//==autofill
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: $color-form-bg !important;
+}
+
+//== form elements
+.form-item {
+  label {
+    @extend %form-label;
+  }
+  input,
+  textarea,
+  select {
+    color: $color-text;
+    border-color: $color-ash;
+    background-color: white;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 2px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.35em 0.5em;
+    margin: 0.3em 0;
+    font-weight: normal;
+    box-sizing: border-box;
+    box-shadow: none;
+    transition: all 0.15s;
+    border-radius: 3px;
+    &:focus {
+      border-color: $color-form-border-hover;
+      background-color: $color-form-bg-hover;
+      outline: none;
+    }
+  }
+  input.form-text,
+  input.form-email,
+  input.form-number,
+  input.form-date,
+  input.form-time,
+  input.form-search,
+  select {
+    height: 38px;
+  }
+  select {
+    cursor: pointer;
+    option {
+      cursor: pointer;
+    }
+  }
+  input:disabled {
+    background-color: #eee;
+  }
+  .description {
+    color: darken(white, 60%);
+    font-style: italic;
+  }
+}
+
+//== file
+input.form-file {
+  background-color: transparent;
+  border: none;
+  padding-left: 0;
+}
+
+.form-managed-file .form-submit {
+  margin: 0;
+  @extend %submit-button;
+}
+
+//=datetime
+.field--type-datetime {
+  .label {
+    @extend %form-label;
+  }
+}
+
+//== Form submit, button
+.form-submit {
+  @extend %submit-button;
+}
+
+//==fieldset
+fieldset:not(.fieldgroup) {
+  border-radius: 3px;
+  border: 2px solid $color-ash;
+  padding: 24px;
+  margin: 24px 0;
+  width: 100%;
+  box-sizing: border-box;
+  legend {
+    .fieldset-legend {
+      display: block;
+      font-weight: 500;
+      padding: 0;
+      margin: 15px 10px 5px;
+    }
+  }
+  .form-type-checkbox {
+    margin-right: 10px;
+    label {
+      font-weight: 400 !important;
+    }
+  }
+  .fieldset-wrapper {
+    legend {
+      margin: 0 0 12px 0;
+      display: block;
+      .fieldset-legend {
+        margin: 0;
+      }
+    }
+  }
+}
+
+//== checkbox ,radio base
+.form-type-checkbox,
+.form-type-radio {
+  position: relative;
+  input {
+    display: none;
+    &[type="checkbox"]:checked + label,
+    &[type="radio"]:checked + label {
+      &:after {
+        transition: all 0.15s;
+      }
+    }
+  }
+  label {
+    margin-top: 5px;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 15px;
+    padding-left: 8px;
+    &:before,
+    &:after {
+      position: absolute;
+      content: " ";
+      display: block;
+      box-sizing: border-box;
+      transition: all 0.15s;
+    }
+    &:before {
+      left: 0;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+    }
+    &:after {
+      left: 4px;
+      top: 9px;
+      width: 0;
+      height: 0;
+    }
+  }
+}
+
+//== checkbox
+.form-type-checkbox {
+  label {
+    &:before {
+      border: 2px solid $color-ash;
+      border-radius: 3px;
+    }
+    &:after {
+      background-color: darken($color-ash, 10%);
+      border-radius: 0;
+    }
+  }
+  input[type="checkbox"]:checked + label {
+    &:after {
+      left: 4px;
+      top: 9px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
+//== radio button
+.form-type-radio {
+  label {
+    &:before {
+      border: 2px solid $color-radio;
+      border-radius: 50%;
+    }
+    &:after {
+      background-color: $color-radio;
+      border-radius: 50%;
+    }
+  }
+  input[type="radio"]:checked + label {
+    &:after {
+      left: 5px;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+    }
+  }
+}
+
+//== File
+.form-type-managed-file {
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+  > label {
+    float: left;
+    border-width: 1px;
+    border-style: solid;
+    color: $color-form-text;
+    border-color: $color-form-border;
+    background-color: $color-form-bg;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-top: 0;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 10px;
+    min-width: 80px;
+    box-sizing: border-box;
+  }
+  .form-managed-file {
+    input[type="file"] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      opacity: 0;
+    }
+  }
+  .js-hide.button {
+    display: none;
+  }
+  .description, .image-preview {
+    clear: both;
+  }
+}
+
+//== button
+%submit-button {
+  background-color: $color-red;
+  color: white;
+  border: none;
+  width: auto;
+  padding: 10px 15px;
+  margin: 5px 0;
+  transition: all 0.25s;
+  display: inline-block;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: $ubuntu;
+  font-weight: 500;
+  &:hover,
+  &:active {
+    background-color: darken($color-red, 5%);
+  }
+}
+
+%submit-button-second {
+  background-color: $color-form-submit-bg;
+  color: $color-form-submit-text;
+  border-color: $color-form-submit-border;
+  border-style: solid;
+  border-width: 1px;
+  width: auto;
+  padding: 10px;
+  margin: 5px 0;
+  transition: all 0.25s;
+  display: inline-block;
+  &:hover,
+  &:active {
+    color: $color-form-submit-text-hover;
+    background-color: $color-form-submit-bg-hover;
+  }
+}
+
+.node-readmore a {
+  @extend %submit-button-second;
+}
+
+//== Preview display:none
+[id^="edit-preview"] {
+  display: none;
+}
+
+.user-register-form {
+  line-height: 22px;
+}
+
+.user-login-form {
+  .form-submit {
+    margin: 24px 0 0;
+  }
+}
+
+details {
+  margin-bottom: 24px;
+  summary {
+    background-color: $color-ash;
+    color: $color-text;
+    padding: 12px 24px;
+    border-radius: 3px;
+    font-weight: 700;
+  }
+}
