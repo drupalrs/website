@@ -1,0 +1,158 @@
+uuid: ac58ba23-0bcc-4dd7-ac10-9bc49cb15789
+langcode: sr
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_drupal_profil
+    - field.field.user.user.field_kompanija
+    - field.field.user.user.field_podaci
+    - field.field.user.user.field_pozicija_profesija
+    - field.field.user.user.field_socijalna_medija
+    - field.field.user.user.field_webstranica
+    - field.field.user.user.user_picture
+    - image.style.user_image
+  module:
+    - address
+    - field_group
+    - image
+    - link
+    - user
+third_party_settings:
+  field_group:
+    group_u_zajednici:
+      children:
+        - user_picture
+        - member_for
+      parent_name: ''
+      weight: 8
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: user-user-full__column-1
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'U zajednici'
+    group_opste_informacije:
+      children:
+        - field_ime
+        - field_prezime
+        - field_podaci
+        - field_drupal_profil
+        - field_socijalna_medija
+        - field_webstranica
+      parent_name: ''
+      weight: 9
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: user-user-full__column-2
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Opšte informacije'
+    group_posao:
+      children:
+        - field_pozicija_profesija
+        - field_kompanija
+      parent_name: ''
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: '&__column-3'
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Posao
+_core:
+  default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_drupal_profil:
+    weight: 24
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_kompanija:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_podaci:
+    weight: 23
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_pozicija_profesija:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_socijalna_medija:
+    weight: 25
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_webstranica:
+    weight: 26
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  member_for:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_picture:
+    type: image
+    weight: 0
+    region: content
+    settings:
+      image_style: user_image
+      image_link: file
+    third_party_settings: {  }
+    label: hidden
+hidden:
+  langcode: true

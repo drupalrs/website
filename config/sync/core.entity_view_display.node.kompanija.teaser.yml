@@ -1,0 +1,67 @@
+uuid: 50d8ade1-3f95-4707-bc56-8ca45f0d5b5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.kompanija.body
+    - field.field.node.kompanija.field_adresa
+    - field.field.node.kompanija.field_email
+    - field.field.node.kompanija.field_galerija
+    - field.field.node.kompanija.field_logo
+    - field.field.node.kompanija.field_telefon
+    - field.field.node.kompanija.field_webstranica
+    - image.style.sajtovi_thumb
+    - node.type.kompanija
+  module:
+    - address
+    - image
+    - link
+    - user
+id: node.kompanija.teaser
+targetEntityType: node
+bundle: kompanija
+mode: teaser
+content:
+  field_adresa:
+    type: address_default
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_logo:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: sajtovi_thumb
+      image_link: content
+    third_party_settings: {  }
+  field_telefon:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_webstranica:
+    type: link
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_email: true
+  field_galerija: true
+  langcode: true
+  links: true

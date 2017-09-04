@@ -1,0 +1,25 @@
+uuid: 1197c969-9989-4db6-8ae0-8e3a5d0c3d45
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4ba844f0-6e4c-48ef-b479-2e2e71bb687e'
+  module:
+    - block_content
+  theme:
+    - drupalrs
+id: kontakt
+theme: drupalrs
+region: footer_fourth
+weight: 0
+provider: null
+plugin: 'block_content:4ba844f0-6e4c-48ef-b479-2e2e71bb687e'
+settings:
+  id: 'block_content:4ba844f0-6e4c-48ef-b479-2e2e71bb687e'
+  label: Kontakt
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

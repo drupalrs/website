@@ -1,0 +1,33 @@
+uuid: 0c4fb616-73b0-4a58-90d4-5863a19f55ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.kompanije
+  module:
+    - node
+    - views
+  theme:
+    - drupalrs
+id: views_block__kompanije_block_1
+theme: drupalrs
+region: postfix_first
+weight: -13
+provider: null
+plugin: 'views_block:kompanije-block_1'
+settings:
+  id: 'views_block:kompanije-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      poslovi: poslovi
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,58 @@
+uuid: 17514594-1a31-480d-8ae8-e41ffac6a421
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.reference.body
+    - field.field.node.reference.field_drupal_verzija
+    - field.field.node.reference.field_glavna_slika
+    - field.field.node.reference.field_kategorija
+    - field.field.node.reference.field_srbija_worldwide
+    - field.field.node.reference.field_webstranica
+    - image.style.sajtovi_thumb
+    - node.type.reference
+  module:
+    - image
+    - link
+    - options
+    - user
+id: node.reference.teaser
+targetEntityType: node
+bundle: reference
+mode: teaser
+content:
+  field_drupal_verzija:
+    type: list_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_glavna_slika:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: sajtovi_thumb
+      image_link: ''
+    third_party_settings: {  }
+  field_webstranica:
+    type: link
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_kategorija: true
+  field_srbija_worldwide: true
+  langcode: true
+  links: true

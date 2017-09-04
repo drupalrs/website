@@ -1,0 +1,20 @@
+uuid: 06e58434-e7d1-4ee5-a2d2-62d9579d2f89
+langcode: sr
+status: true
+dependencies:
+  theme:
+    - drupalrs
+_core:
+  default_config_hash: QnyyHYqmTKgm7sZu2eXF0uF7Q_RKL3BYFtFWuTi_-W0
+id: drupalrs_local_actions
+theme: drupalrs
+region: content
+weight: -12
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

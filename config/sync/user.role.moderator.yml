@@ -1,0 +1,25 @@
+uuid: 3607368e-47cd-49db-8c1f-ad1830ecca9d
+langcode: en
+status: true
+dependencies: {  }
+id: moderator
+label: Moderator
+weight: 4
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'administer nodes'
+  - 'edit any blog content'
+  - 'edit any dogadaji content'
+  - 'edit any kompanija content'
+  - 'edit any page content'
+  - 'edit any poslovi content'
+  - 'edit any reference content'
+  - 'edit own blog content'
+  - 'edit own dogadaji content'
+  - 'edit own kompanija content'
+  - 'edit own page content'
+  - 'edit own poslovi content'
+  - 'edit own reference content'
+  - 'use text format full_html'
+  - 'view the administration theme'

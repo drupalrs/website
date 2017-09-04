@@ -1,0 +1,33 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Poništite
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Rastuće
+          sort_desc_label: Opadajuće
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Stavki po stranici'
+            items_per_page_options_all_label: '- Sve -'
+      fields:
+        path:
+          label: Putanja
+        count:
+          label: Broj
+        langcode:
+          label: Jezik
+        redirect_404_operations:
+          label: Operаcije
+      filters:
+        path:
+          expose:
+            label: Putanja
+        langcode:
+          expose:
+            label: Jezik
+  page_1:
+    display_title: Strana

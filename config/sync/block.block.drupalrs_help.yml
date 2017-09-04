@@ -1,0 +1,22 @@
+uuid: b866f2c7-c07e-4684-a906-42e1df86dff7
+langcode: sr
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - drupalrs
+_core:
+  default_config_hash: CnlOtQWg3TFyJudL_MS9MQEjc2D8_peCfwt_GM8K4AQ
+id: drupalrs_help
+theme: drupalrs
+region: content
+weight: -14
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

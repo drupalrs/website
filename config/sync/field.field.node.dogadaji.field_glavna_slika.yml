@@ -1,0 +1,38 @@
+uuid: 5f124f97-2575-4d9b-8ce9-e918d85b9fc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_glavna_slika
+    - node.type.dogadaji
+  module:
+    - image
+id: node.dogadaji.field_glavna_slika
+field_name: field_glavna_slika
+entity_type: node
+bundle: dogadaji
+label: Slika
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'event/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: d8c0ce8d-b4bf-4a12-a740-71733e9949c6
+    alt: ''
+    title: ''
+    width: 480
+    height: 480
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

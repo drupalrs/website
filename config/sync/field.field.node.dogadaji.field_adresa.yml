@@ -1,0 +1,36 @@
+uuid: 42d5a84e-730c-4d0f-bb31-5ea06390a74d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_adresa
+    - node.type.dogadaji
+  module:
+    - address
+id: node.dogadaji.field_adresa
+field_name: field_adresa
+entity_type: node
+bundle: dogadaji
+label: Adresa
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    RS: RS
+  fields:
+    locality: locality
+    postalCode: postalCode
+    addressLine1: addressLine1
+    administrativeArea: '0'
+    dependentLocality: '0'
+    sortingCode: '0'
+    addressLine2: '0'
+    organization: '0'
+    givenName: '0'
+    additionalName: '0'
+    familyName: '0'
+  langcode_override: ''
+field_type: address

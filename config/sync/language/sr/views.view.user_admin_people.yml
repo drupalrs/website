@@ -1,0 +1,52 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Poništite
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Rastuće
+          sort_desc_label: Opadajuće
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Stavki po stranici'
+            items_per_page_options_all_label: '- Sve -'
+      fields:
+        name:
+          label: 'Korisničko ime'
+        status:
+          label: Status
+          settings:
+            format_custom_true: Aktivno
+            format_custom_false: Blokiran
+        roles_target_id:
+          label: Uloge
+        created:
+          label: 'Član ste već'
+        access:
+          label: 'Poslednji pristup'
+        operations:
+          label: Operаcije
+      filters:
+        combine:
+          expose:
+            label: 'Име или E-пошта садрже'
+        status:
+          group_info:
+            label: Status
+            group_items:
+              1:
+                title: Aktivno
+              2:
+                title: Blokiran
+        permission:
+          expose:
+            label: Dozvole
+      use_more_text: opširnije
+  page_1:
+    display_title: Strana
+    display_options:
+      menu:
+        title: Spisak

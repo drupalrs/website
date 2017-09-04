@@ -1,0 +1,15 @@
+uuid: 8c89d3a1-b16c-4d72-a464-9abadf4dc287
+name: 'Drupal Srbija'
+mail: info@drupal.rs
+slogan: 'Zajednica Drupal korisnika u Srbiji'
+page:
+  403: /node/78
+  404: /node/72
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: sr
+default_langcode: sr
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+mail_notification: ''

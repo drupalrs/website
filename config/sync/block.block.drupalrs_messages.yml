@@ -1,0 +1,22 @@
+uuid: 9a68080d-4ee1-4977-81b1-b42a99c4bc91
+langcode: sr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupalrs
+_core:
+  default_config_hash: 1b4XO2_EKu_myUbnL92a5u6vbbbvbQJwPDj0V94vmZA
+id: drupalrs_messages
+theme: drupalrs
+region: highlighted
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

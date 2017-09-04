@@ -1,0 +1,24 @@
+uuid: 88d6f684-6cb0-40f0-9abe-1e9c5b21234a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - drupalrs
+id: useraccountmenu
+theme: drupalrs
+region: user_navigation
+weight: 0
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

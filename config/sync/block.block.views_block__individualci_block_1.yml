@@ -1,0 +1,33 @@
+uuid: 6e60f73c-255c-4e10-b0ac-a1f0f5706d0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.individualci
+  module:
+    - node
+    - views
+  theme:
+    - drupalrs
+id: views_block__individualci_block_1
+theme: drupalrs
+region: postfix_first
+weight: -15
+provider: null
+plugin: 'views_block:individualci-block_1'
+settings:
+  id: 'views_block:individualci-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      kompanija: kompanija
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

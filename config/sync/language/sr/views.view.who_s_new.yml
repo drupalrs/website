@@ -1,0 +1,18 @@
+label: 'Novi korisnici'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Potvrdite
+          reset_button_label: Poništite
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Rastuće
+          sort_desc_label: Opadajuće
+      title: 'Novi korisnici'
+  block_1:
+    display_title: 'Novi korisnici'
+    display_options:
+      display_description: 'Листа нових корисника'
+      block_description: 'Novi korisnici'
+      block_category: Korisnik

@@ -1,0 +1,20 @@
+uuid: dddd8a4e-f672-48d1-a324-26102cd2cfd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_tagovi
+field_name: field_tagovi
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

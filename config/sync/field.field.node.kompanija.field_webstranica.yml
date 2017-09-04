@@ -1,0 +1,23 @@
+uuid: cd20e2d8-10cf-4508-baf0-988029f5e08e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_webstranica
+    - node.type.kompanija
+  module:
+    - link
+id: node.kompanija.field_webstranica
+field_name: field_webstranica
+entity_type: node
+bundle: kompanija
+label: 'Web stranica'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

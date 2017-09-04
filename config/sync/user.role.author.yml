@@ -1,0 +1,42 @@
+uuid: f0934474-121e-4440-8b58-2521f8bd3479
+langcode: en
+status: true
+dependencies: {  }
+id: author
+label: Author
+weight: 3
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'administer nodes'
+  - 'create blog content'
+  - 'create dogadaji content'
+  - 'create kompanija content'
+  - 'create page content'
+  - 'create poslovi content'
+  - 'create reference content'
+  - 'delete any dogadaji content'
+  - 'delete any kompanija content'
+  - 'delete any page content'
+  - 'delete any poslovi content'
+  - 'delete any reference content'
+  - 'delete own blog content'
+  - 'delete own dogadaji content'
+  - 'delete own kompanija content'
+  - 'delete own page content'
+  - 'delete own poslovi content'
+  - 'delete own reference content'
+  - 'edit any blog content'
+  - 'edit any dogadaji content'
+  - 'edit any kompanija content'
+  - 'edit any page content'
+  - 'edit any poslovi content'
+  - 'edit any reference content'
+  - 'edit own blog content'
+  - 'edit own dogadaji content'
+  - 'edit own kompanija content'
+  - 'edit own page content'
+  - 'edit own poslovi content'
+  - 'edit own reference content'
+  - 'use text format full_html'
+  - 'view the administration theme'

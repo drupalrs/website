@@ -1,0 +1,26 @@
+uuid: dda152b9-c00e-46c5-888f-51544eb829ef
+langcode: sr
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - drupalrs
+_core:
+  default_config_hash: DY1d0c0GYVbv0JcCmAJo0Y-ciuJy459DUYpu-ZaE8jE
+id: drupalrs_footer
+theme: drupalrs
+region: footer_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Korisni linkovi'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

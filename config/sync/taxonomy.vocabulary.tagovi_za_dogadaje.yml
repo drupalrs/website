@@ -1,0 +1,9 @@
+uuid: a84b225a-2764-4e65-bd55-98b303ead7e4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Tagovi za događaje'
+vid: tagovi_za_dogadaje
+description: ''
+hierarchy: 0
+weight: 0

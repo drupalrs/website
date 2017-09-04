@@ -1,0 +1,22 @@
+uuid: b9b4c558-2792-4f2f-a399-66967f21d29a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.poslovi
+  module:
+    - text
+id: node.poslovi.body
+field_name: body
+entity_type: node
+bundle: poslovi
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

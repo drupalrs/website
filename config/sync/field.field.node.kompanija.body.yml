@@ -1,0 +1,22 @@
+uuid: b2a35187-63ce-472f-b934-07e282939fa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.kompanija
+  module:
+    - text
+id: node.kompanija.body
+field_name: body
+entity_type: node
+bundle: kompanija
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

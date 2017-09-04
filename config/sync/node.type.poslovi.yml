@@ -1,0 +1,17 @@
+uuid: 45d9a74c-ba72-4f2e-bc42-6acf43166ece
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Poslovi
+type: poslovi
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

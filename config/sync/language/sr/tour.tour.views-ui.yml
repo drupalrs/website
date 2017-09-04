@@ -1,0 +1,10 @@
+tips:
+  views-ui-filter-operations:
+    body: 'Додај, пресложи или уклони филтере.'
+  views-ui-sorts:
+    label: 'Критеријум сортирања'
+  views-ui-sorts-operations:
+    label: 'Акције сортирања'
+    body: 'Додај, пресложи или уклони правила сортирања.'
+  views-ui-preview:
+    label: Pregled

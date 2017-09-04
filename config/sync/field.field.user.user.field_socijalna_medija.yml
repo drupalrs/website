@@ -1,0 +1,23 @@
+uuid: 78803dd8-536d-4603-bb0a-d2be32984627
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_socijalna_medija
+  module:
+    - link
+    - user
+id: user.user.field_socijalna_medija
+field_name: field_socijalna_medija
+entity_type: user
+bundle: user
+label: 'Socijalna medija'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

@@ -1,0 +1,19 @@
+uuid: b65b4dd6-c9a7-4b33-b968-ffd0527f7f49
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - user
+id: user.field_webstranica
+field_name: field_webstranica
+entity_type: user
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

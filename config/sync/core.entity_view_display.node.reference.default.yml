@@ -1,0 +1,63 @@
+uuid: f6aae1cf-67af-4ab2-8225-2542399d40c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.reference.body
+    - field.field.node.reference.field_drupal_verzija
+    - field.field.node.reference.field_glavna_slika
+    - field.field.node.reference.field_kategorija
+    - field.field.node.reference.field_srbija_worldwide
+    - field.field.node.reference.field_webstranica
+    - node.type.reference
+  module:
+    - image
+    - link
+    - options
+    - text
+    - user
+id: node.reference.default
+targetEntityType: node
+bundle: reference
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_drupal_verzija:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_glavna_slika:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_webstranica:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  field_kategorija: true
+  field_srbija_worldwide: true
+  langcode: true
+  links: true

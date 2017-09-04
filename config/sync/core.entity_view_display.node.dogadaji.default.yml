@@ -1,0 +1,127 @@
+uuid: 08efef8b-6444-400b-b351-da0664c57258
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dogadaji.body
+    - field.field.node.dogadaji.field_adresa
+    - field.field.node.dogadaji.field_datum_i_vreme
+    - field.field.node.dogadaji.field_datum_i_vreme_do
+    - field.field.node.dogadaji.field_galerija
+    - field.field.node.dogadaji.field_glavna_slika
+    - field.field.node.dogadaji.field_tagovi
+    - node.type.dogadaji
+  module:
+    - address
+    - datetime
+    - field_group
+    - image
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_fotografija:
+      children:
+        - field_glavna_slika
+        - field_tagovi
+        - field_adresa
+        - field_datum_i_vreme
+        - field_datum_i_vreme_do
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: Fotografija
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: node-dogadaji-full__column-1
+      label: Fotografija
+    group_o_dogadaju:
+      children:
+        - body
+        - field_galerija
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        label: 'O događaju'
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: node-dogadaji-full__column-2
+      label: 'O događaju'
+id: node.dogadaji.default
+targetEntityType: node
+bundle: dogadaji
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_adresa:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_datum_i_vreme:
+    weight: 3
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: 'd.m.Y. G:i'
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  field_datum_i_vreme_do:
+    weight: 4
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'd.m.Y. G:i'
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  field_galerija:
+    type: image
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      image_style: large
+      image_link: file
+    third_party_settings: {  }
+  field_glavna_slika:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_tagovi:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  links: true
