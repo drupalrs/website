@@ -83,9 +83,6 @@
             "web/core": [
                 "type:drupal-core"
             ],
-            "public_html/libraries/{$name}": [
-                "type:drupal-library"
-            ],
             "web/modules/contrib/{$name}": [
                 "type:drupal-module"
             ],
@@ -97,6 +94,9 @@
             ],
             "drush/contrib/{$name}": [
                 "type:drupal-drush"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
             ]
         }
     },
