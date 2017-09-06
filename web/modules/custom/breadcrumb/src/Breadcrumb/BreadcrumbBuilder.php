@@ -60,6 +60,8 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface{
 
     $breadcrumbs->addLink(Link::createFromRoute($title, '<none>'));
 
+    $breadcrumbs->addCacheContexts(["url"]);
+
     return $breadcrumbs;
   }
 
