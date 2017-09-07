@@ -1,0 +1,21 @@
+uuid: bd02e6de-c505-4e18-b177-cd8b57ba449e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tip
+    - node.type.poslovi
+  module:
+    - options
+id: node.poslovi.field_tip
+field_name: field_tip
+entity_type: node
+bundle: poslovi
+label: Tip
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

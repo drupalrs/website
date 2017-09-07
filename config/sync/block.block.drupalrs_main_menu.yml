@@ -1,0 +1,26 @@
+uuid: 4293f2fb-1aee-49ce-ba9c-82056609e9f0
+langcode: sr
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - drupalrs
+_core:
+  default_config_hash: VuRdsbvd7mpvV6NXYNNOiEGaVbe6zGOYaavDs_wp0kQ
+id: drupalrs_main_menu
+theme: drupalrs
+region: navigation
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

@@ -1,0 +1,24 @@
+drupalrs:
+  drupalrs:
+    allow_clone_for_subtheme: true
+    allow_enable_disable: true
+    title: 'Default library for the drupalrs theme'
+    description: 'Default Studio Present theme library description.'
+    scss:
+      css/drupalrs.css: 'scss/drupalrs.scss'
+  version: VERSION
+  js:
+    js/drupalrs.js: {}
+  css:
+    theme:
+      css/drupalrs.css: {}
+    layout:
+      css/layout/default-layout.css: {}
+    #component:
+      #css/components/component.css: {}
+  dependencies:
+    - core/jquery
+development:
+  css:
+    theme:
+      css/development.css: {}

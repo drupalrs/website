@@ -1,0 +1,27 @@
+uuid: 0242630b-ad6f-4df8-88cf-e4f768c7bcb5
+langcode: sr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupalrs
+_core:
+  default_config_hash: WDh6LZCnXOLlBD2GLQjO6BnV1gsRY819lrb86NZuNKc
+id: drupalrs_breadcrumbs
+theme: drupalrs
+region: highlighted
+weight: -7
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/user/*"
+    negate: true
+    context_mapping: {  }

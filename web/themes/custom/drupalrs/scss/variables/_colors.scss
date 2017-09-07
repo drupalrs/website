@@ -1,0 +1,96 @@
+//## README
+//
+//
+// if something is missing from the list,
+// naming conventions:
+//
+// $color-[PREFIX]-[NAME]-[STATE];
+//
+// PREFIX: mobile-menu, navigation, form, table, etc.
+// STATE: hover, active
+//
+// if you need color variable in the FORM or TABLE, or NAVIGATION, use:
+// $color-form-[NAME];
+// $color-table-[NAME];
+// $color-navigation-[NAME];
+//
+// Note: Please look at the variables, and according to create a new one
+
+//== other colors
+$color-yellow: #ffe600;
+$color-green: #01752B;
+$color-blue: #2764ad;
+$color-red: #df0024;
+$color-sky: #e7f1f7;
+$color-ash: #ebebeb;
+
+//== $HTML
+$color-bg: $color-sky;
+
+//== text color
+$color-text: lighten(black, 40%);
+
+//== h1-h6 color
+$color-title: lighten(black, 20%);
+
+//== links
+$color-link: $color-blue;
+$color-link-hover: darken($color-blue, 10%);
+
+//== mobile menu color
+$color-mobile-menu-bg: $color-blue; /* mobile menu background color */
+$color-mobile-menu-text: rgba(white, 0.75); /* link text color */
+$color-mobile-menu-text-hover: white; /* hover link text color */
+$color-mobile-menu-text-active: white; /* active link text color */
+$color-mobile-menu-text-active-bg: darken($color-blue, 5%); /* active link background color */
+$color-mobile-menu-hamburger: $color-blue; /* 3 vertical line color */
+$color-mobile-menu-hamburger-bg: transparent;
+
+//== navigation
+$color-navigation-bg: white; /* UL bg color */
+$color-navigation-link: lighten(black, 40%); /* link text color */
+$color-navigation-link-hover: white; /* hover link text color */
+$color-navigation-link-active: transparent; /*active link text color */
+$color-navigation-link-bg: transparent; /* text background color */
+$color-navigation-link-bg-hover: $color-red; /* hover text background color */
+$color-navigation-link-bg-active: $color-navigation-link-bg-hover; /* active text background color */
+
+//== form
+$color-form-label-text: $color-text;
+$color-form-text: $color-text;
+$color-form-bg: #f4f4f4; /* input background color */
+$color-form-bg-hover: white; /* hover input background color */
+$color-form-border: #aeaeae; /* input border color */
+$color-form-border-hover: #d6d6d6; /* hover input border color */
+$color-form-submit-text: #000; /* form submit text color */
+$color-form-submit-text-hover: #ffffff; /* hover form submit text color */
+$color-form-submit-bg: #f8f8f8; /* form submit background color */
+$color-form-submit-bg-hover: #989898; /* hover form submit background color */
+$color-form-submit-border: #f1f1f1; /* form submit border color */
+
+//== form radio - checkbox
+$color-checkbox: darken(white, 40%);
+$color-radio: darken(white, 40%);
+
+//== pager
+
+$color-pager-item-bg: darken(white, 30%); /* pager item background color */
+$color-pager-item-bg-hover: darken(white, 40%); /* hover pager item background color */
+$color-pager-item-text: lighten(black, 30%); /* pager item text color */
+$color-pager-item-text-hover: lighten(black, 30%); /* hover pager item text color hover*/
+
+//== tables
+$color-table-border: darken(white, 10%);
+$color-table-bg: white;
+$color-table-even-bg: darken(white, 5%);
+$color-table-header-text: $color-text;
+$color-table-header-bg: darken(white, 12%);
+$color-table-text: $color-text;
+
+//== language switcher
+
+$color-lang-switcher-bg: white;
+
+//== primary tabs - Administrator login-edit-view-etc tabs
+$color-primary-tabs-bg: #eee;
+$color-primary-tabs-border: darken(#D9EDF7, 20%);

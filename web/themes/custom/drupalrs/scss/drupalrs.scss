@@ -1,0 +1,10 @@
+@import "../node_modules/node-normalize-scss/normalize";
+@import "variables/**/*";
+@import "admin-tools/**/*";
+@import "elements/**/*";
+@import "components/**/*";
+
+body {
+  background-color: $color-bg;
+}
+

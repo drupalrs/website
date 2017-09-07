@@ -1,0 +1,9 @@
+uuid: 1aa171eb-77fb-498f-9665-4a81613a0afa
+langcode: en
+status: true
+dependencies: {  }
+name: 'Tagovi za poslove'
+vid: tagovi_za_poslove
+description: ''
+hierarchy: 0
+weight: 0

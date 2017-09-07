@@ -1,0 +1,14 @@
+# https://git-scm.com/docs/gitignore
+# https://help.github.com/articles/ignoring-files
+# Example .gitignore files: https://github.com/github/gitignore
+/bower_components/
+/node_modules/
+/libraries/
+/sass_imports/
+.remote-sync.json
+/dist
+.idea
+/css/development.css
+/css/development.css.map
+/css/drupalrs.css.map
+/css/layout/default-layout.css.map

@@ -1,0 +1,22 @@
+uuid: a47197e2-0794-4ccc-8deb-15c7e5426eec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.dogadaji
+  module:
+    - text
+id: node.dogadaji.body
+field_name: body
+entity_type: node
+bundle: dogadaji
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

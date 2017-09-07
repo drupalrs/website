@@ -1,0 +1,31 @@
+uuid: 03bfb5d2-2f4f-4313-9654-0adc1df32b94
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c9a07d6b-2c9f-4010-b1de-e7915c91fc70'
+  module:
+    - block_content
+    - system
+  theme:
+    - drupalrs
+id: noviautori
+theme: drupalrs
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'block_content:c9a07d6b-2c9f-4010-b1de-e7915c91fc70'
+settings:
+  id: 'block_content:c9a07d6b-2c9f-4010-b1de-e7915c91fc70'
+  label: 'Novi autori'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /blog
+    negate: false
+    context_mapping: {  }

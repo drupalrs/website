@@ -1,0 +1,25 @@
+.tabs {
+  list-style: none;
+  margin: 0 0 0.5em;
+  padding: 0;
+  &__item {
+    display: inline-block;
+    margin-right: 0.3em; /* LTR */
+    margin-bottom: 3px;
+    border-left: 3px solid $color-primary-tabs-bg;
+    transition: all 0.15s;
+    a {
+      display: block;
+      padding: 0.2em 1em;
+      text-decoration: none;
+      background-color: $color-primary-tabs-bg;
+      &.is-active, &:hover {
+        text-decoration: none;
+        background-color: darken($color-primary-tabs-bg, 5%);
+      }
+    }
+    &--is-active {
+      border-left-color: $color-primary-tabs-border;
+    }
+  }
+}

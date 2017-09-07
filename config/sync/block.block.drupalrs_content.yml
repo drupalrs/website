@@ -1,0 +1,22 @@
+uuid: 3ab48ddd-d5d7-4cae-af50-7a6efb2e5dd5
+langcode: sr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupalrs
+_core:
+  default_config_hash: qD65TomGixgfzUARi8VB6-b4BNA9iNlhjk-Tbzn7a0U
+id: drupalrs_content
+theme: drupalrs
+region: content
+weight: -10
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

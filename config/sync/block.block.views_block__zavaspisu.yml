@@ -1,0 +1,30 @@
+uuid: 86aa83d7-2cba-49ba-8ae8-5be467094420
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.autori
+  module:
+    - system
+    - views
+  theme:
+    - drupalrs
+id: views_block__zavaspisu
+theme: drupalrs
+region: sidebar_first
+weight: -11
+provider: null
+plugin: 'views_block:autori-block_1'
+settings:
+  id: 'views_block:autori-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /blog
+    negate: false
+    context_mapping: {  }

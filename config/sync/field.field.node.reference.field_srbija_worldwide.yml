@@ -1,0 +1,23 @@
+uuid: 1520cd32-77a6-4f02-b0a9-4d8fb4279a15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_srbija_worldwide
+    - node.type.reference
+  module:
+    - options
+id: node.reference.field_srbija_worldwide
+field_name: field_srbija_worldwide
+entity_type: node
+bundle: reference
+label: 'Srbija / Worldwide'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

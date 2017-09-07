@@ -1,0 +1,11 @@
+.region-content {
+  box-sizing: border-box;
+  max-width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0px 0px 45px 5px rgba(0, 85, 150, 0.1);
+  padding: 24px;
+  @media #{$Narrow} {
+    padding: 48px;
+  }
+}

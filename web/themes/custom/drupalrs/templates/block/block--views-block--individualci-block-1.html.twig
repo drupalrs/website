@@ -1,0 +1,21 @@
+{% set drupalrs_block = 'block block-' ~ id|split('__', 2)|first|clean_class %}
+{% set drupalrs_modifiers = id|split('__')|slice(1) %}
+{%
+set classes = [
+drupalrs_block
+]
+%}
+{% for modifier in id|split('__')|slice(1) %}
+  {% set classes = classes|merge([drupalrs_block ~ '--' ~ modifier|clean_class]) %}
+{% endfor %}
+{% set content %}{% spaceless %}{{ content }}{% endspaceless %}{% endset %}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes.addClass(drupalrs_block ~ '__title block-title') }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {{ content }}
+  </div>
+{% endif %}

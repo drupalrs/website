@@ -1,0 +1,13 @@
+label: 'Nedavni komentari'
+description: 'Последњи коментари.'
+display:
+  default:
+    display_options:
+      title: 'Nedavni komentari'
+      empty:
+        area_text_custom:
+          content: 'Nema nijednog komentara.'
+  block_1:
+    display_title: Blok
+    display_options:
+      block_description: 'Nedavni komentari'

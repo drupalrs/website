@@ -1,0 +1,15 @@
+features:
+  node_user_picture: false
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+logo:
+  use_default: true
+  path: ''
+favicon:
+  use_default: true
+  path: ''
+layouts: {  }
+breakpoint_group_primary: drupalrs.default
+drupalrs_block_demo_mode: 1
+twig_cache_status: 1

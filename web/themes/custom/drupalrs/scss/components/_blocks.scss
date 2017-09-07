@@ -1,0 +1,801 @@
+.block-title {
+  padding: 0 16px;
+  @media #{$Narrow} {
+    padding: 0;
+  }
+}
+
+.path-frontpage, .path-blog, .path-taxonomy {
+  .region-content {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+.block-drupalrs-page-title {
+  h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    @media #{$Narrow} {
+      font-size: 36px;
+      margin-bottom: 36px;
+    }
+  }
+}
+
+.block-useraccountmenu {
+  &__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    a[href*="/user/logout"] {
+      display: none;
+    }
+
+    &-item {
+      &-link {
+        text-indent: -9999px;
+        width: 36px;
+        height: 36px;
+        background-image: url(../images/account.svg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+      }
+    }
+  }
+
+  @media #{$Narrow} {
+    a[href*="/user/logout"] {
+      display: block;
+    }
+
+    text-align: right;
+    &__menu {
+      padding-left: 40px;
+      margin: 8px 0;
+      &-item {
+        display: inline-block;
+        font-size: 12px;
+        color: $color-blue;
+        font-weight: 500;
+        &:after {
+          content: "/";
+        }
+        &:last-of-type {
+          &:after {
+            content: "";
+          }
+        }
+        &-link {
+          display: inline-block;
+          color: $color-blue;
+          text-indent: 0;
+          width: auto;
+          height: auto;
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+.block-highlightedlinks {
+  &__content {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: right;
+      li {
+        display: inline-block;
+        margin-left: 8px;
+        a {
+          border: 2px solid $color-ash;
+          border-radius: 3px;
+          padding: 9px 8px 9px 34px;
+          font-size: 13px;
+          font-weight: 600;
+          color: lighten(black, 40%);
+          background-position: left 9px center;
+          background-size: 20px 20px;
+          background-repeat: no-repeat;
+          transition: all ease-in-out 0.1s;
+          @media #{$Wide} {
+            padding: 9px 12px 9px 36px;
+          }
+        }
+        &:hover {
+          a {
+            border-color: $color-blue;
+            background-color: $color-blue;
+            color: white;
+            text-decoration: none;
+            transition: all ease-in-out 0.1s;
+          }
+        }
+        &:nth-of-type(1) {
+          a {
+            background-image: url("../images/drupal.svg");
+          }
+          &:hover {
+            a {
+              background-image: url("../images/drupal-white.svg");
+            }
+          }
+        }
+        &:nth-of-type(2) {
+          a {
+            background-image: url("../images/slack.svg");
+          }
+          &:hover {
+            a {
+              background-image: url("../images/slack-white.svg");
+            }
+          }
+        }
+        &:nth-of-type(3) {
+          a {
+            background-image: url("../images/newsletter.svg");
+          }
+          &:hover {
+            a {
+              background-image: url("../images/newsletter-white.svg");
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.block-views-block--dogadaji-block-1 {
+  .block-title {
+    font-size: 18px;
+    color: $color-blue;
+    margin-bottom: 18px;
+    padding-left: 10px;
+    @media #{$Wide} {
+      padding-left: 0;
+    }
+  }
+  margin-bottom: 24px;
+  @media #{$Narrow} {
+    margin-bottom: 48px;
+  }
+}
+
+.block-facebooktimeline {
+  .block-title {
+    font-size: 18px;
+    color: $color-blue;
+    margin-bottom: 18px;
+    padding-left: 10px;
+    @media #{$Wide} {
+      padding-left: 0;
+    }
+  }
+  &__content {
+    background-color: white;
+    border-radius: 3px;
+    padding: 18px;
+  }
+  margin-bottom: 24px;
+  @media #{$Narrow} {
+    margin-bottom: 48px;
+  }
+}
+
+.block-twitter {
+  .block-title {
+    font-size: 18px;
+    color: $color-blue;
+    margin-bottom: 18px;
+    padding-left: 10px;
+    @media #{$Wide} {
+      padding-left: 0;
+    }
+  }
+  &__content {
+    background-color: white;
+    border-radius: 3px;
+    padding: 18px;
+  }
+  margin-bottom: 24px;
+  @media #{$Narrow} {
+    margin-bottom: 48px;
+  }
+}
+
+.block-noviautori {
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  font-weight: 400;
+  border-radius: 3px;
+  padding: 18px;
+  background-color: $color-red;
+  margin-bottom: 48px;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.block-views-block--zavaspisu {
+  .block-title {
+    font-size: 18px;
+    color: $color-blue;
+    margin-bottom: 18px;
+  }
+  margin-bottom: 24px;
+  .view-autori-block-1 {
+    background-color: white;
+    border-radius: 3px;
+    padding: 18px;
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      &-item {
+        margin-bottom: 8px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &__item-uid-1 {
+      display: inline-block;
+      margin-right: 4px;
+    }
+    &__item-uid {
+      display: inline-block;
+      &:before {
+        content: "(";
+      }
+      &:after {
+        content: ")";
+      }
+      span {
+        margin: 0 -3px;
+      }
+    }
+  }
+}
+
+.view-dogadaji-block-1 {
+  $root: &;
+  background-color: rgba(white, 0.5);
+  border-radius: 3px;
+  padding: 18px;
+  box-shadow: 0px 0px 45px 5px rgba(0, 85, 150, 0.1);
+  &__content {
+  }
+  &__row {
+    &--is-sticky {
+      #{$root}__item-nothing {
+        a {
+          background-color: $color-blue;
+          #{$root}__item-title {
+            color: white !important;
+          }
+          #{$root}__item-field-datum-i-vreme {
+            color: white;
+            .day {
+              color: white;
+            }
+          }
+          #{$root}__item-field-adresa-locality {
+            background-image: url(../images/map-white.svg);
+            color: white;
+          }
+          #{$root}__item-field-datum-i-vreme-do {
+            background-image: url(../images/calendar-white.svg);
+            color: white;
+          }
+        }
+      }
+    }
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+  &__item-nothing {
+    a {
+      display: block;
+      position: relative;
+      clear: both;
+      box-sizing: border-box;
+      background-color: white;
+      border-radius: 3px;
+      padding: 20px;
+      margin-bottom: 16px;
+      color: $color-text !important;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      &:after {
+        content: "";
+        border-radius: 5px;
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      &:hover {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__item-title {
+    font-family: $merriweather;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    display: inline;
+    color: #222222;
+  }
+  &__item-field-datum-i-vreme {
+    margin-top: -4px;
+    width: 72px;
+    text-align: center;
+    float: left;
+    margin-right: 18px;
+    min-height: 95px;
+    .day {
+      display: block;
+      color: $color-red;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .month {
+      display: block;
+      font-weight: 500;
+    }
+    .year {
+      display: block;
+      line-height: 22px;
+      font-weight: 500;
+    }
+  }
+  &__item-field-tagovi {
+    background-color: $color-red;
+    display: inline-block;
+    color: white;
+    border-radius: 4px;
+    font-size: 11px;
+    padding: 3px 6px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  &__item-field-adresa-locality {
+    clear: both;
+    position: relative;
+    margin-top: auto;
+    padding-left: 24px;
+    background-image: url(../images/map.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 14px;
+    font-size: 13px;
+  }
+  &__item-field-datum-i-vreme-do {
+    padding-left: 24px;
+    background-image: url(../images/calendar.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 14px;
+    clear: both;
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  .more-link {
+    @extend %button;
+  }
+}
+
+.block-views-block--dogadajiuzajednici {
+  margin-top: 72px;
+  background-color: #f3f8fb;
+  padding: 36px 24px 0;
+  @media #{$Narrow} {
+    padding: 48px 0;
+  }
+  .block-title {
+    color: $color-blue;
+    text-align: center;
+  }
+  .view-dogadaji-block-1 {
+    max-width: 1030px;
+    margin: 0 auto;
+    background: none;
+    box-shadow: none !important;
+    padding: 0;
+    &__content {
+      padding: 0;
+      background-color: transparent;
+      box-shadow: none;
+      @media #{$Narrow} {
+        padding: 0 48px;
+      }
+    }
+    &__rows {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__row {
+      flex-grow: 1;
+      margin-bottom: 0;
+      width: 100%;
+      margin-bottom: 24px;
+      @media #{$Narrow} {
+        max-width: 49%;
+        margin-bottom: 0;
+      }
+      @media #{$Normal} {
+        max-width: 32%;
+      }
+    }
+    .more-link {
+      display: none;
+    }
+  }
+}
+
+.block-views-block--individualci-block-1 {
+  background-color: white;
+  padding: 48px;
+  border-radius: 3px;
+  __rows {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+}
+
+.view-individualci-block-1 {
+  $root: &;
+  &__row {
+    display: inline-block;
+    max-width: 125px;
+    margin-right: 45px;
+    flex-grow: 1;
+    &:hover {
+      #{$root}__item-user-picture {
+        position: relative;
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba($color-blue, 0.75);
+          z-index: 99;
+          border-radius: 3px;
+          pointer-events: none;
+          background-image: url("../images/user.svg");
+          background-repeat: no-repeat;
+          background-size: 32px;
+          background-position: center;
+        }
+        img {
+          filter: grayscale(100%);
+        }
+      }
+      #{$root}__item-name {
+        &-content {
+          a {
+            color: $color-blue !important;
+          }
+        }
+      }
+    }
+  }
+  &__item-user-picture {
+    &-content {
+      img {
+        display: block;
+        border-radius: 3px;
+      }
+    }
+  }
+  &__item-name {
+    &-content {
+      a {
+        display: block;
+        margin-top: 12px;
+        color: $color-text;
+        font-weight: 500;
+        margin-bottom: 2px;
+      }
+    }
+  }
+  &__item-field-pozicija-profesija {
+    &-content {
+      font-size: 12px;
+      line-height: 18px;
+      white-space: nowrap;
+      width: 125px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.block-views-block--blog-block-1,
+.block-views-block--blog-block-1-2 {
+  .block-title {
+    font-size: 18px;
+    color: $color-blue;
+    margin-bottom: 18px;
+  }
+
+  .view-blog-block-1 {
+    &__content {
+      padding: 24px;
+      background-color: white;
+      border-radius: 3px;
+    }
+    &__rows {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__row {
+      box-sizing: border-box;
+      margin-bottom: 24px;
+      position: relative;
+      width: 100%;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      @media #{$Small} {
+        width: 48%;
+        @media #{$Narrow} {
+          width: 100%;
+        }
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    &__item-field-glavna-slika {
+      &-content {
+        position: relative;
+        a {
+          display: block;
+          img {
+            border-radius: 3px;
+            display: block;
+          }
+        }
+        &:after {
+          position: absolute;
+          background: linear-gradient(to bottom, transparent 0%, rgba(black, 0.5) 100%);
+          display: block;
+          content: "";
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 3px;
+          pointer-events: none;
+        }
+      }
+    }
+    &__item-title {
+      position: absolute;
+      bottom: 8px;
+      left: 12px;
+      a {
+        color: white;
+        font-family: $merriweather;
+        font-weight: 700;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+.block-views-block--poslovi-block-2 {
+  margin-bottom: 48px;
+  .block-title {
+    font-size: 18px;
+    color: $color-blue;
+    margin-bottom: 18px;
+  }
+
+  .view-poslovi-block-2 {
+    padding: 24px;
+    background-color: rgba(white, 0.5);
+    border-radius: 3px;
+    .more-link {
+      @extend %button;
+    }
+    .node-poslovi-teaser__title-link {
+      border: 0;
+      &:after {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+.block-mainnavigation {
+  padding: 24px;
+  background-color: rgba(white, 0.5);
+  &__menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  &__menu-item {
+    &:last-of-type {
+      .block-mainnavigation__menu-item-link {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__menu-item-link {
+    display: block;
+    background-color: white;
+    padding: 18px;
+    border-radius: 3px;
+    margin-bottom: 12px;
+    transition: background-color ease-in-out 0.1s, color ease-in-out 0.1s;
+    font-family: $merriweather;
+    font-weight: 700;
+    &:hover {
+      background-color: $color-blue;
+      color: white;
+      text-decoration: none;
+      transition: background-color ease-in-out 0.1s, color ease-in-out 0.1s;
+    }
+  }
+}
+
+.block-views-block--poslovi-block-3 {
+  padding: 24px;
+  background-color: white;
+  border-radius: 3px;
+  margin-bottom: 24px;
+
+  @media #{$Narrow} {
+    padding: 48px;
+  }
+
+  .view-poslovi-block-3 {
+    &__rows {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__row {
+      box-sizing: border-box;
+      margin-bottom: 24px;
+      @media #{$Narrow} {
+        width: 48%;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.block-views-block--blog-block-2 {
+  padding: 48px;
+  background-color: white;
+  border-radius: 3px;
+
+  .view-blog-block-2 {
+    &__row:not(:last-of-type) {
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid $color-ash;
+    }
+  }
+
+  .node-blog-teaser {
+    @include clearfix;
+    &__inner {
+      @media #{$Narrow} {
+        float: right;
+        width: 66%;
+      }
+    }
+    &__title {
+      line-height: 36px;
+      margin-bottom: 8px;
+    }
+    &__meta {
+      color: #444444;
+      margin-bottom: 32px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    &__body {
+      line-height: 22px;
+    }
+    &__submitted {
+      &-date {
+        margin-right: 4px;
+      }
+      &-author {
+        margin-left: 4px;
+        [property="schema:name"] {
+          font-style: italic;
+          color: $color-blue;
+        }
+      }
+    }
+    &__field-tagovi {
+      font-size: 13px;
+      padding-left: 28px;
+      font-weight: 500;
+      background-image: url("../images/tags.svg");
+      background-size: 18px;
+      background-position: left center;
+      background-repeat: no-repeat;
+      &-item {
+        display: inline-block;
+        color: #999999;
+        a {
+          color: #999999;
+          &:hover {
+            color: $color-blue;
+          }
+        }
+      }
+    }
+    &__glavna-slika {
+      @media #{$Narrow} {
+        float: left;
+        width: 30%;
+        margin-top: 8px;
+        margin-right: 30px;
+      }
+      img {
+        border-radius: 3px;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+.block-views-block--poslovi-block-1 {
+  background-color: white;
+  padding: 24px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 45px 5px rgba(0, 85, 150, 0.1);
+  width: 100%;
+  margin: 48px auto 0;
+  box-sizing: border-box;
+
+  .more-link {
+    @extend %button;
+  }
+
+  @media #{$Narrow} {
+    width: 60%;
+    margin: 48px auto;
+  }
+}

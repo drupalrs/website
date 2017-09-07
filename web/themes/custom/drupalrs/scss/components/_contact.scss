@@ -1,0 +1,26 @@
+.block-kontaktpodaci {
+  background-color: white;
+  border-radius: 3px;
+  padding: 24px;
+
+  h3 {
+    color: $color-blue;
+    font-style: 18px;
+    margin: 36px 0 18px;
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+  
+  a {
+    font-style: italic;
+  }
+}
+
+.path-contact {
+  .contact-form {
+    .form-submit {
+      margin-top: 36px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+uuid: 07990290-cc32-4b45-8c0c-36aacda4c0bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_podaci
+  module:
+    - address
+    - user
+id: user.user.field_podaci
+field_name: field_podaci
+entity_type: user
+bundle: user
+label: Podaci
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    RS: RS
+  fields:
+    locality: locality
+    givenName: givenName
+    familyName: familyName
+    administrativeArea: '0'
+    dependentLocality: '0'
+    postalCode: '0'
+    sortingCode: '0'
+    addressLine1: '0'
+    addressLine2: '0'
+    organization: '0'
+    additionalName: '0'
+  langcode_override: ''
+field_type: address

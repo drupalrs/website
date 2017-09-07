@@ -1,0 +1,22 @@
+uuid: ea9fba14-f735-422e-bd8e-f1372b1732f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: poslovi
+label: Poslovi
+type: 'canonical_entities:node'
+pattern: 'poslovi/[node:title]'
+selection_criteria:
+  2e7c2d08-8637-46d0-b719-b2ce837cf511:
+    id: node_type
+    bundles:
+      poslovi: poslovi
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 2e7c2d08-8637-46d0-b719-b2ce837cf511
+selection_logic: and
+weight: -5
+relationships: {  }

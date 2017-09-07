@@ -1,0 +1,22 @@
+uuid: dcb4f239-a467-4a46-8080-cbbe54c1001a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: reference
+label: Reference
+type: 'canonical_entities:node'
+pattern: 'reference/[node:field_srbija_worldwide]/[node:title]'
+selection_criteria:
+  69bfe451-667f-4e73-88f5-b9b2a6e56c44:
+    id: node_type
+    bundles:
+      reference: reference
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 69bfe451-667f-4e73-88f5-b9b2a6e56c44
+selection_logic: and
+weight: -5
+relationships: {  }

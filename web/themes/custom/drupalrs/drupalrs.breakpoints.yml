@@ -1,0 +1,45 @@
+drupalrs.default.all:
+  label: All
+  mediaQuery: 'all and (min-width: 0px)'
+  weight: 0
+  multipliers:
+    - 1x
+  status: true
+  langcode: en
+  group: drupalrs.default
+drupalrs.default.small:
+  label: Small
+  mediaQuery: 'all and (min-width: 480px)'
+  weight: 2
+  multipliers:
+    - 1x
+  status: true
+  langcode: en
+  group: drupalrs.default
+drupalrs.default.narrow:
+  label: Narrow
+  mediaQuery: 'all and (min-width: 768px)'
+  weight: 3
+  multipliers:
+    - 1x
+  status: true
+  langcode: en
+  group: drupalrs.default
+drupalrs.default.normal:
+  label: Normal
+  mediaQuery: 'all and (min-width: 1024px)'
+  weight: 4
+  multipliers:
+    - 1x
+  status: true
+  langcode: en
+  group: drupalrs.default
+drupalrs.default.wide:
+  label: Wide
+  mediaQuery: 'all and (min-width: 1220px)'
+  weight: 5
+  multipliers:
+    - 1x
+  status: true
+  langcode: en
+  group: drupalrs.default

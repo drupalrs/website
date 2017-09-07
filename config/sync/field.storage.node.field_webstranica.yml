@@ -1,0 +1,19 @@
+uuid: 19e03a70-b2f8-44d5-a319-0e277f53f140
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_webstranica
+field_name: field_webstranica
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

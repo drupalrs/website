@@ -1,0 +1,31 @@
+uuid: 5e340593-f0ba-43f8-a5d5-7262e2aad716
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f30695d9-a103-4b4e-be76-e0dff075139b'
+  module:
+    - block_content
+    - system
+  theme:
+    - drupalrs
+id: twitter
+theme: drupalrs
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'block_content:f30695d9-a103-4b4e-be76-e0dff075139b'
+settings:
+  id: 'block_content:f30695d9-a103-4b4e-be76-e0dff075139b'
+  label: Twitter
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

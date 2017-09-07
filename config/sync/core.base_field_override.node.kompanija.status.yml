@@ -1,0 +1,22 @@
+uuid: f1ac6b37-968a-4afb-901f-6cae0c4cefd5
+langcode: sr
+status: true
+dependencies:
+  config:
+    - node.type.kompanija
+id: node.kompanija.status
+field_name: status
+entity_type: node
+bundle: kompanija
+label: 'Publishing status'
+description: 'A boolean indicating the published state.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

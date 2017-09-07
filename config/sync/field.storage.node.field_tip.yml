@@ -1,0 +1,27 @@
+uuid: 3b757103-0661-4618-a1bb-62b83b5819e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tip
+field_name: field_tip
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Ponuda posla'
+    -
+      value: '1'
+      label: 'Ponuda usluge'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

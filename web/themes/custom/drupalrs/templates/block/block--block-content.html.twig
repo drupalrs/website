@@ -1,0 +1,10 @@
+{% extends "block.html.twig" %}
+
+{% block content %}
+  {%
+    set sub_drupalrs_block = block_content_bundle|replace({'_': '-'}) ~ '-' ~ configuration.view_mode|clean_class
+  %}
+  <div class="{{ drupalrs_block }}__content block-content-{{ sub_drupalrs_block }}">
+    {{ content }}
+  </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+uuid: 92f7bd1d-e47f-4b7b-ac73-6175e2ba47f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-footer
+  module:
+    - system
+  theme:
+    - drupalrs
+id: socialfooter
+theme: drupalrs
+region: footer_third
+weight: 0
+provider: null
+plugin: 'system_menu_block:social-footer'
+settings:
+  id: 'system_menu_block:social-footer'
+  label: Social
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

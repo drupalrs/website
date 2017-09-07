@@ -1,0 +1,14 @@
+uuid: 234ec900-528e-4db1-96a8-a2791c1f381a
+langcode: en
+status: true
+dependencies: {  }
+name: blog_sidebar
+label: 'Blog sidebar (285x160)'
+effects:
+  011121da-6774-4803-87d1-0f07a64ce847:
+    uuid: 011121da-6774-4803-87d1-0f07a64ce847
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 272
+      height: 150

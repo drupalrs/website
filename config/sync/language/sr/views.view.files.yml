@@ -1,0 +1,38 @@
+description: 'Нађи и управљај датотекама.'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Poništite
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Rastuće
+          sort_desc_label: Opadajuće
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Stavki po stranici'
+            items_per_page_options_all_label: '- Sve -'
+      fields:
+        filename:
+          label: Naziv
+        filesize:
+          label: Veličina
+        status:
+          label: Status
+      filters:
+        status:
+          expose:
+            label: Status
+  page_2:
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Stavki po stranici'
+            items_per_page_options_all_label: '- Sve -'
+      arguments:
+        fid:
+          exception:
+            title: Svi

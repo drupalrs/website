@@ -1,0 +1,30 @@
+uuid: d2ffac00-92b2-4619-9433-228a95879061
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.dogadaji
+  module:
+    - system
+    - views
+  theme:
+    - drupalrs
+id: views_block__dogadaji_block_1
+theme: drupalrs
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'views_block:dogadaji-block_1'
+settings:
+  id: 'views_block:dogadaji-block_1'
+  label: Uskoro
+  provider: views
+  label_display: visible
+  views_label: Uskoro
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,6 @@
+{% if attributes.type == 'submit' %}
+  {% set value = attributes.value %}
+  <button{{ attributes }}>{{ value }}</button>{{ children }}
+{% else %}
+  <input{{ attributes }} />{{ children }}
+{% endif %}

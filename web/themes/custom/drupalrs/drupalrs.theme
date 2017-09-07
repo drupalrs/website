@@ -1,0 +1,198 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+
+/**
+ * @file
+ * Functions to support theming in the theme drupalrs.
+ */
+
+function drupalrs_css_alter(&$vars) {
+	$localhost = array('10.1.3.120', '91.150.66.201');
+		if (in_array($_SERVER['REMOTE_ADDR'], $localhost)) {
+			foreach ($vars as $key => $val) {
+			$vars[$key]['preprocess'] = FALSE;
+		}
+	}
+}
+
+function drupalrs_preprocess_html(&$vars) {
+
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $vars['language'] = $language;
+
+	$current_path = \Drupal::service('path.current')->getPath();
+	$vars['current_path'] = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+
+
+	$page = $vars['page'];
+
+  $theme = \Drupal::theme()->getActiveTheme()->getName();
+
+  $themes = \Drupal::service('theme_handler')->listInfo();
+  $defaultLayout = theme_get_setting('default_layout');
+  $themeSettings = $themes[$theme];
+
+  // Display demo placeholder blocks for every region.
+  $regionDemo = theme_get_setting('drupalrs_block_demo_mode', $theme);
+
+	$vars['demo_enabled'] = 0;
+
+  if ($regionDemo) {
+
+		$vars['demo_enabled'] = 1;
+		$vars['#attached']['library'][] =  'drupalrs/development';
+
+    drupal_set_message(t('Region Demonstration mode is on. This can be turned off in theme settings.'), 'warning');
+    $theme_regions = $themeSettings->info['regions'];
+    $regionSkip = theme_get_setting('block_demo_excluded_regions', $theme);
+    if (!is_array($regionSkip)) {
+      $regionSkip = array();
+    }
+    foreach($theme_regions as $region => $region_name) {
+      // skip the regions listed in block_demo_excluded_regions, primarily page_top & page_bottom
+      if (!in_array($region, $regionSkip)) {
+        // here we want to add a simple block that we can use to demonstrate region placements for ALL regions in the theme(s)
+        if (isset($vars['page'][$region]['#region'])) {
+          $regiondemoblock = array(
+            'regiondemoblock' => array(
+              '#markup' => '<div id="theme-demo-block--'. $region .'" class="theme-demo-block active-region clearfix"><h3 class="block-title demo-block-title">' . t('@regionname', array('@regionname' => $region_name . ' Region')) . '</h3><div class="demo-block-content"></div></div>',
+              '#weight' => -9999
+            ),
+          );
+          $vars['page'][$region] = $regiondemoblock + $vars['page'][$region];
+        }
+        else {
+          // no region was already present, so we'll need to insert it
+          $vars['page'][$region] = array(
+            '#theme_wrappers' => array(
+              'region'
+            ),
+            '#region' => $region,
+            'regiondemoblock' => array(
+              '#markup' => '<div id="theme-demo-block--'. $region .'" class="theme-demo-block inactive-region clearfix"><h3 class="block-title demo-block-title">' . t('@regionname', array('@regionname' => $region_name . ' Region')) . '</h3><div class="demo-block-content"></div></div>',
+              '#weight' => -9999
+            ),
+          );
+        }
+      }
+      else {
+
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function drupalrs_element_info_alter(array &$types) {
+  foreach ($types as $name => $type) {
+    if (isset($type['#theme_wrappers']) && in_array('form_element', $type['#theme_wrappers'])) {
+      $types[$name]['#process'][] = '_drupalrs_process_form_element';
+    }
+    if (isset($type['#theme_wrappers']) && in_array('details', $type['#theme_wrappers'])) {
+      $types[$name]['#process'][] = '_drupalrs_process_form_element';
+    }
+  }
+}
+function _drupalrs_process_form_element(&$element, FormStateInterface $form_state, &$complete_form) {
+  if (!empty($complete_form['#form_id'])) {
+    $element['#drupalrs_form_id'] = $complete_form['#form_id'];
+  }
+  return $element;
+}
+/**
+ * @param $variables
+ *
+ * @see template_preprocess_form_element()
+ */
+function drupalrs_preprocess_form_element(&$variables) {
+  $element = &$variables['element'];
+  $variables['form_id'] = isset($element['#drupalrs_form_id']) ? $element['#drupalrs_form_id'] : '';
+}
+/**
+ * @param $variables
+ *
+ * @see template_preprocess_details()
+ */
+function drupalrs_preprocess_details(&$variables) {
+  $element = &$variables['element'];
+  $variables['form_id'] = isset($element['#drupalrs_form_id']) ? $element['#drupalrs_form_id'] : '';
+  $variables['name'] = isset($element['#id']) ? preg_replace(['/^edit\-/', '/\-\d+$/'], '', $element['#id']) : '';
+}
+/**
+ * @param $variables
+ *
+ * @see template_preprocess_form_element()
+ */
+function drupalrs_preprocess_form(&$variables) {
+  $element = &$variables['element'];
+  $variables['form_id'] = $element['#form_id'];
+}
+/**
+ * Implements THEME_preprocess_HOOK() for field.html.twig.
+ *
+ * @see hook_preprocess_HOOK()
+ * @see template_preprocess_field()
+ */
+function drupalrs_preprocess_field(&$variables) {
+  $element = $variables['element'];
+  $variables['bundle'] = $element['#bundle'];
+  $variables['view_mode'] = $element['#view_mode'];
+  // TODO Remove when possible; when rendered inside a view or field, default is used instead of full.
+  if ($variables['entity_type'] == 'block_content' && $variables['view_mode'] == 'default') {
+    $variables['view_mode'] = 'full';
+  }
+}
+/**
+ * Implements THEME_preprocess_HOOK() for block.html.twig.
+ *
+ * @see hook_preprocess_HOOK()
+ * @see template_preprocess_block()
+ */
+function drupalrs_preprocess_block(&$variables) {
+  $elements = $variables['elements'];
+  $variables['id'] = $elements['#id'];
+  if ($variables['base_plugin_id'] == 'block_content') {
+    /** @var \Drupal\block_content\Entity\BlockContent $block_content */
+    $block_content = $variables['content']['#block_content'];
+    $variables['block_content_bundle'] = $block_content->bundle();
+  }
+  if ($variables['base_plugin_id'] == 'system_menu_block') {
+    if ($variables['content_attributes'] instanceof Attribute === FALSE) {
+      $variables['content_attributes'] = new Attribute($variables['content_attributes']);
+    }
+    $variables['content']['#attributes'] = $variables['content_attributes'];
+  }
+}
+/**
+ * Implements THEME_preprocess_HOOK() for item_list.
+ *
+ * @see hook_preprocess_HOOK()
+ * @see template_preprocess_item_list()
+ */
+function drupalrs_preprocess_item_list(&$variables) {
+  $hook = explode('__', $variables['theme_hook_original']);
+  $variables['drupalrs_block'] = Html::cleanCssIdentifier(implode('-', $hook));
+}
+/**
+ * Implements THEME_preprocess_HOOK() for user.html.twig.
+ *
+ * @see hook_preprocess_HOOK()
+ * @see template_preprocess_user()
+ */
+function drupalrs_preprocess_user(&$variables) {
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
+}
+
+/**
+ * Implementation of hook_theme_suggestions_hook().
+ */
+function drupalrs_theme_suggestions_block_alter(&$suggestions, $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}

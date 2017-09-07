@@ -1,0 +1,28 @@
+uuid: dfac02e1-245f-4920-8dad-574cb3b28de7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tagovi_poslovi
+    - node.type.poslovi
+    - taxonomy.vocabulary.tagovi_za_poslove
+id: node.poslovi.field_tagovi_poslovi
+field_name: field_tagovi_poslovi
+entity_type: node
+bundle: poslovi
+label: Tagovi
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tagovi_za_poslove: tagovi_za_poslove
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

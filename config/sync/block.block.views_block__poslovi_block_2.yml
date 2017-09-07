@@ -1,0 +1,32 @@
+uuid: 7afe5c2a-c435-4d27-a00e-5501bad2366e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.poslovi
+  module:
+    - node
+    - views
+  theme:
+    - drupalrs
+id: views_block__poslovi_block_2
+theme: drupalrs
+region: sidebar_second
+weight: -15
+provider: null
+plugin: 'views_block:poslovi-block_2'
+settings:
+  id: 'views_block:poslovi-block_2'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      blog: blog
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

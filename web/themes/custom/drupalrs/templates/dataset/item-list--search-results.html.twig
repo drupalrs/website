@@ -1,0 +1,10 @@
+{% extends "item-list.html.twig" %}
+{%
+  set drupalrs_block = 'search-results'
+%}
+{%
+  set item_classes = [
+    drupalrs_block ~ '__item',
+    'search-result',
+  ]
+%}

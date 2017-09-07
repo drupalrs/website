@@ -1,0 +1,9 @@
+uuid: 2a818da6-909b-46d9-8835-778cb2bb2def
+langcode: en
+status: true
+dependencies: {  }
+name: Kategorija
+vid: kategorija
+description: 'Kategorija web stranice'
+hierarchy: 0
+weight: 0

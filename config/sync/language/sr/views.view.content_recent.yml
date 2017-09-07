@@ -1,0 +1,14 @@
+description: 'Скорашњи садржај'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Potvrdite
+          reset_button_label: Poništite
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Rastuće
+          sort_desc_label: Opadajuće
+      use_more_text: Više
+  block_1:
+    display_title: Blok

@@ -1,0 +1,15 @@
+uuid: 2db9aec0-b6d0-4f8b-9ad4-a47650af78bf
+langcode: sr
+status: true
+dependencies: {  }
+name: blog_teaser
+label: 'Blog teaser (686x400)'
+effects:
+  9aa8f657-c65c-4bc7-a7d0-85e0f35d9f8f:
+    uuid: 9aa8f657-c65c-4bc7-a7d0-85e0f35d9f8f
+    id: image_scale
+    weight: 1
+    data:
+      width: 686
+      height: null
+      upscale: false

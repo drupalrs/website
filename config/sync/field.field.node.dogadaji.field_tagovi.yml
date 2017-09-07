@@ -1,0 +1,28 @@
+uuid: 09757754-4f46-4840-b870-3d0b6587e86b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tagovi
+    - node.type.dogadaji
+    - taxonomy.vocabulary.tagovi_za_dogadaje
+id: node.dogadaji.field_tagovi
+field_name: field_tagovi
+entity_type: node
+bundle: dogadaji
+label: Tagovi
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tagovi_za_dogadaje: tagovi_za_dogadaje
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: tags
+field_type: entity_reference

@@ -1,0 +1,40 @@
+.search-block-form, .search-page-form {
+  .form-item {
+    display: inline-block;
+  }
+}
+
+.search-page-form {
+  details {
+    margin: 24px 0 48px;
+  }
+}
+
+.search-results {
+  &__list {
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid $color-ash;
+    &:last-of-type {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+  }
+}
+
+.search-result {
+  &__snippet {
+    margin-bottom: 0;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  &__info {
+    display: none;
+  }
+}

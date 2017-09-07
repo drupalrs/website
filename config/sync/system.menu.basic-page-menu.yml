@@ -1,0 +1,8 @@
+uuid: 49733102-0eed-47f1-8a06-b76d71b38903
+langcode: en
+status: true
+dependencies: {  }
+id: basic-page-menu
+label: 'Basic Page Menu'
+description: ''
+locked: false

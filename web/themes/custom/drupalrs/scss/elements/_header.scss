@@ -1,0 +1,36 @@
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0 0 9px 1px rgba(0, 85, 150, 0.1);
+  padding: 8px 0;
+
+  @media #{$Narrow} {
+    padding: 0;
+    position: relative;
+    top: auto;
+  }
+}
+
+.block-drupalrs-branding {
+  img {
+    max-height: 40px;
+    @media #{$Narrow} {
+      max-height: initial;
+    }
+  }
+}
+
+.nav-up {
+  transform: translateY(-64px);
+  transition: all ease-in-out 0.25s;
+  @media #{$Narrow} {
+    transform: translateY(0);
+  }
+}
+
+.nav-down {
+  transition: all ease-in-out 0.25s;
+}

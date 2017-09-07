@@ -1,0 +1,14 @@
+uuid: 53f4b195-115a-4e46-b20d-a4e87cbd75a8
+langcode: en
+status: true
+dependencies: {  }
+name: user_image
+label: 'User Image'
+effects:
+  63571012-661d-40bd-a6cd-3b4efc9e2235:
+    uuid: 63571012-661d-40bd-a6cd-3b4efc9e2235
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 145
+      height: 145

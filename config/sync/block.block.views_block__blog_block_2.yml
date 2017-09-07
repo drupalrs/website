@@ -1,0 +1,31 @@
+uuid: 2b977303-093a-42db-9df6-6d5a22d21ed0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blog
+  module:
+    - system
+    - views
+  theme:
+    - drupalrs
+id: views_block__blog_block_2
+theme: drupalrs
+region: postfix_first
+weight: -14
+provider: null
+plugin: 'views_block:blog-block_2'
+settings:
+  id: 'views_block:blog-block_2'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }

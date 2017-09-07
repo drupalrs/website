@@ -1,0 +1,7 @@
+uuid: e8f690a1-b938-41e9-a1ad-b686d3a2479f
+langcode: sr
+status: false
+dependencies: {  }
+formId: node_dogadaji_form
+captchaType: default
+label: null

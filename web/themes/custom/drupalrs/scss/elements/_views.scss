@@ -1,0 +1,305 @@
+.view-frontpage-page-1 {
+  &__content {
+
+  }
+  &__row {
+    background-color: white;
+    padding: 48px;
+    margin-bottom: 24px;
+  }
+}
+
+.view-individualci-page-1 {
+  &__content {
+
+  }
+  &__rows {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    &-title {
+      width: 100%;
+      margin: 24px 0;
+      font-size: 24px;
+      color: $color-blue;
+    }
+  }
+  &__row {
+    display: inline-block;
+    width: 100%;
+    flex-grow: 1;
+    margin-bottom: 18px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    @media #{$Narrow} {
+      max-width: 125px;
+      margin-right: 45px;
+      margin-bottom: 0;
+    }
+    &:hover {
+      .view-individualci-page-1__item-user-picture {
+        position: relative;
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba($color-blue, 0.75);
+          z-index: 99;
+          border-radius: 3px;
+          pointer-events: none;
+          background-image: url("../images/user.svg");
+          background-repeat: no-repeat;
+          background-size: 32px;
+          background-position: center;
+        }
+        img {
+          filter: grayscale(100%);
+        }
+      }
+      .view-individualci-page-1__item-name {
+        &-content {
+          a {
+            color: $color-blue !important;
+          }
+        }
+      }
+    }
+  }
+  &__item-user-picture {
+    &-content {
+      img {
+        display: block;
+        border-radius: 3px;
+      }
+    }
+    float: left;
+    width: 50px;
+    margin: 2px 16px 0 0;
+    @media #{$Narrow} {
+      margin: 0;
+      float: none;
+      width: 100%;
+    }
+  }
+  &__item-name {
+    &-content {
+      a {
+        display: block;
+        margin-top: 12px;
+        color: $color-text;
+        font-weight: 500;
+      }
+    }
+  }
+  &__item-field-pozicija-profesija {
+    &-content {
+      font-size: 12px;
+      line-height: 18px;
+      white-space: nowrap;
+      width: 125px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.view-kompanije-page-1,
+.view-sajtovi-u-drupalu-page-1 {
+  &__content {
+    @include clearfix();
+  }
+  &__rows {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  &__row {
+    box-sizing: border-box;
+    padding: 24px;
+    border: 1px solid $color-ash;
+    box-shadow: 0 2px 4px $color-ash;
+    border-radius: 3px;
+    margin-bottom: 26px;
+    @media #{$Narrow} {
+      width: 48%;
+    }
+    @media #{$Normal} {
+      width: 31%;
+    }
+  }
+}
+
+.view-dogadaji-page-1 {
+  $root: &;
+  &__content {
+  }
+  &__rows {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  &__row {
+    @media #{$Narrow} {
+      width: 49%;
+    }
+    &--is-sticky {
+      #{$root}__item-nothing {
+        a {
+          display: block;
+          color: white !important;
+          border: none;
+          background-color: $color-blue;
+        }
+      }
+      #{$root}__item-title {
+        color: white !important;
+      }
+      #{$root}__item-field-datum-i-vreme-1 {
+        color: white;
+        .day {
+          color: white;
+        }
+      }
+      #{$root}__item-field-adresa-locality {
+        background-image: url(../images/map-white.svg);
+        color: white;
+      }
+      #{$root}__item-field-datum-i-vreme-do {
+        background-image: url(../images/calendar-white.svg);
+        color: white;
+      }
+    }
+  }
+  &__item-nothing {
+    height: 90%;
+    &-content {
+      display: block;
+      height: 100%;
+    }
+    a {
+      height: 100%;
+      border-radius: 3px;
+      display: block;
+      box-sizing: border-box;
+      padding: 24px;
+      border: 1px solid $color-ash;
+      box-shadow: 0 2px 4px $color-ash;
+      margin-bottom: 24px;
+      color: $color-text !important;
+      position: relative;
+      &:after {
+        content: "";
+        border-radius: 5px;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      &:hover {
+        transform: scale(1);
+        text-decoration: none;
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__item-title {
+    font-family: $merriweather;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    display: inline;
+    color: #222;
+  }
+  &__item-body {
+    margin-top: 12px;
+  }
+  &__item-field-datum-i-vreme-1 {
+    margin-top: -4px;
+    width: 72px;
+    text-align: center;
+    float: right;
+    margin-left: 18px;
+    min-height: 95px;
+    .day {
+      display: block;
+      color: $color-red;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .month {
+      display: block;
+      font-weight: 500;
+    }
+    .year {
+      display: block;
+      font-weight: 500;
+    }
+  }
+  &__item-field-tagovi {
+    background-color: $color-red;
+    display: inline-block;
+    color: white;
+    border-radius: 4px;
+    font-size: 11px;
+    padding: 3px 6px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  &__item-field-adresa-locality {
+    clear: both;
+    position: relative;
+    margin-top: auto;
+    padding-left: 24px;
+    background-image: url(../images/map.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 14px;
+    font-size: 13px;
+  }
+  &__item-field-datum-i-vreme-do {
+    padding-left: 24px;
+    background-image: url(../images/calendar.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 14px;
+    clear: both;
+    margin-bottom: 12px;
+    margin-top: 10px;
+    font-size: 13px;
+  }
+}
+
+.view-poslovi-page-1 {
+  &__rows {
+    @media #{$Narrow} {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: -24px;
+    }
+  }
+  &__row {
+    @media #{$Narrow} {
+      width: 49%;
+    }
+  }
+}

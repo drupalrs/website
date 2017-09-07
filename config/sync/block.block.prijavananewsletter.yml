@@ -1,0 +1,25 @@
+uuid: e82cef33-0c03-468f-bca2-dd7f0222766e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:590d8ee1-9acc-4cd4-b187-6b05573ccec7'
+  module:
+    - block_content
+  theme:
+    - drupalrs
+id: prijavananewsletter
+theme: drupalrs
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:590d8ee1-9acc-4cd4-b187-6b05573ccec7'
+settings:
+  id: 'block_content:590d8ee1-9acc-4cd4-b187-6b05573ccec7'
+  label: 'Prijava na Newsletter'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
