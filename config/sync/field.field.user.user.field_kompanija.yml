@@ -12,7 +12,7 @@ field_name: field_kompanija
 entity_type: user
 bundle: user
 label: Kompanija
-description: ''
+description: "Ukoliko kompanija u kojoj radite nije na listi možete je sami postaviti na <a target=\"_blank\" href=\"https://drupal.rs/node/add/kompanija\">linku</a>. <br>\r\nPostavljena kompanija će biti <b>nevidljiva</b> dok joj administrator ne promeni status."
 required: false
 translatable: false
 default_value: {  }

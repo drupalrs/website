@@ -53,6 +53,7 @@ module:
   rdf: 0
   redirect: 0
   redirect_404: 0
+  rules: 0
   search: 0
   shortcut: 0
   swiftmailer: 0
@@ -62,6 +63,7 @@ module:
   token: 0
   toolbar: 0
   tour: 0
+  typed_data: 0
   user: 0
   views_ui: 0
   xmlsitemap: 0
