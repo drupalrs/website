@@ -1,0 +1,49 @@
+uuid: 0c6f8890-1f8a-4c66-807e-0ae69018422c
+langcode: sr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.compact
+    - field.field.user.user.field_drupal_profil
+    - field.field.user.user.field_kompanija
+    - field.field.user.user.field_podaci
+    - field.field.user.user.field_pozicija_profesija
+    - field.field.user.user.field_socijalna_medija
+    - field.field.user.user.field_webstranica
+    - field.field.user.user.user_picture
+    - image.style.user_image
+  module:
+    - address
+    - image
+    - user
+_core:
+  default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
+id: user.user.compact
+targetEntityType: user
+bundle: user
+mode: compact
+content:
+  field_podaci:
+    type: address_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  user_picture:
+    type: image
+    weight: 0
+    region: content
+    settings:
+      image_style: user_image
+      image_link: content
+    third_party_settings: {  }
+    label: hidden
+hidden:
+  field_drupal_profil: true
+  field_kompanija: true
+  field_pozicija_profesija: true
+  field_socijalna_medija: true
+  field_webstranica: true
+  langcode: true
+  member_for: true

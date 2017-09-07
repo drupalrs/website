@@ -1,0 +1,25 @@
+{% set drupalrs_base = form_id ? 'form-' ~ form_id|clean_class ~ '__' ~ name|clean_class : 'details' %}
+{%
+  set classes = [
+    drupalrs_base
+  ]
+%}
+<details{{ attributes.addClass(classes) }}>
+  {%- if title -%}
+    <summary{{ summary_attributes }}>{{ title }}</summary>
+  {%- endif -%}
+
+  {% if errors %}
+    <div class="{{ drupalrs_base }}-errors form-item--error-message">
+      <strong>{{ errors }}</strong>
+    </div>
+  {% endif %}
+
+  {%- if description -%}
+    <div class="{{ drupalrs_base }}-description">{{ description }}</div>
+  {%- endif -%}
+
+  {{ children }}
+  {{ value }}
+
+</details>

@@ -1,0 +1,36 @@
+uuid: ab10971e-09f5-45ab-b753-e008c6ec390f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_adresa
+    - node.type.kompanija
+  module:
+    - address
+id: node.kompanija.field_adresa
+field_name: field_adresa
+entity_type: node
+bundle: kompanija
+label: Adresa
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    RS: RS
+  fields:
+    locality: locality
+    postalCode: postalCode
+    addressLine1: addressLine1
+    administrativeArea: '0'
+    dependentLocality: '0'
+    sortingCode: '0'
+    addressLine2: '0'
+    organization: '0'
+    givenName: '0'
+    additionalName: '0'
+    familyName: '0'
+  langcode_override: ''
+field_type: address

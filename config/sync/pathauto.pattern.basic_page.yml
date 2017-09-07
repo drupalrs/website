@@ -1,0 +1,22 @@
+uuid: bee40685-150f-42d2-8546-550beaffc669
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: basic_page
+label: 'Basic Page'
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parent]/[node:title]'
+selection_criteria:
+  bb7906de-6244-42a0-bab2-ad9101a0824a:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: bb7906de-6244-42a0-bab2-ad9101a0824a
+selection_logic: and
+weight: -5
+relationships: {  }

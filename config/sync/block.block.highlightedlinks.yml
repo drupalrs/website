@@ -1,0 +1,25 @@
+uuid: a02c983c-179a-4e79-af72-d9933e513df3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e60a417a-c526-4af5-8b9d-688cd70b4c30'
+  module:
+    - block_content
+  theme:
+    - drupalrs
+id: highlightedlinks
+theme: drupalrs
+region: highlighted_links
+weight: 0
+provider: null
+plugin: 'block_content:e60a417a-c526-4af5-8b9d-688cd70b4c30'
+settings:
+  id: 'block_content:e60a417a-c526-4af5-8b9d-688cd70b4c30'
+  label: 'Highlighted Links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

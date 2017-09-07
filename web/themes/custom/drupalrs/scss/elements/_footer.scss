@@ -1,0 +1,102 @@
+#footer {
+  padding: 72px 12px 0;
+  text-align: center;
+  background-color: $color-blue;
+  color: white;
+
+  .block-title {
+    color: white;
+    font-size: 18px;
+  }
+
+  p {
+    color: rgba(white, 0.75);
+  }
+
+  @media #{$Narrow} {
+    text-align: left;
+    padding: 72px 0 0;
+  }
+}
+
+.block-drupalrs20082017 {
+  margin-top: 36px;
+  text-align: center;
+  background-color: rgba(black, 0.2);
+  margin: 36px -12px 0;
+  &__content {
+    .block-content-basic-full__body {
+      p {
+        margin-bottom: 0;
+        height: 38px;
+        line-height: 38px;
+        color: #5389b6 !important;
+        font-size: 12px;
+      }
+    }
+  }
+  @media #{$Narrow} {
+    margin: 36px 0 0;
+  }
+}
+
+.block-prijavananewsletter {
+  input[type="text"] {
+    height: 36px;
+    border: 2px solid rgba(white, 0.5);
+    color: rgba(white, 0.75);
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: transparent;
+    font-family: $ubuntu;
+    padding-left: 12px;
+    width: 200px !important;
+    margin-right: 0;
+    &::-webkit-input-placeholder {
+      color: rgba(white, 0.5);
+    }
+    @media #{$Narrow} {
+      margin-bottom: 10px;
+      margin-right: 12px;
+    }
+    @media #{$Wide} {
+      margin-bottom: 0;
+    }
+  }
+  input[type="submit"] {
+    height: 36px;
+    border: none;
+    color: white;
+    background-color: $color-red;
+    border-radius: 3px;
+    width: 128px;
+    font-family: $ubuntu;
+    margin-top: 12px;
+    @media #{$Narrow} {
+      margin-top: 0;
+    }
+  }
+}
+
+.block-drupalrs-footer,
+.block-socialfooter,
+.block-kontakt {
+  &__title {
+    color: white;
+    font-size: 18px;
+  }
+  &__menu, ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    &-item {
+      margin-bottom: 5px;
+      &-link {
+        color: rgba(white, 0.75) !important;
+        &:hover {
+          color: white !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+uuid: ea0761c4-3adb-4780-88b2-ae2168a6a7c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: kompanije
+label: Kompanije
+type: 'canonical_entities:node'
+pattern: 'kompanija/[node:title]'
+selection_criteria:
+  89e56a67-faa1-4876-ad56-57b5614c7bc0:
+    id: node_type
+    bundles:
+      kompanija: kompanija
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 89e56a67-faa1-4876-ad56-57b5614c7bc0
+selection_logic: and
+weight: -5
+relationships: {  }

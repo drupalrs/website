@@ -1,0 +1,25 @@
+uuid: e65b1211-b206-40ef-b229-a2d7dc6c6e3f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:22bc9b94-bdcd-42ea-bdaf-a67efb565c68'
+  module:
+    - block_content
+  theme:
+    - drupalrs
+id: drupal.rs20082017
+theme: drupalrs
+region: footer_fifth
+weight: 0
+provider: null
+plugin: 'block_content:22bc9b94-bdcd-42ea-bdaf-a67efb565c68'
+settings:
+  id: 'block_content:22bc9b94-bdcd-42ea-bdaf-a67efb565c68'
+  label: 'Drupal.rs 2008-2017'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

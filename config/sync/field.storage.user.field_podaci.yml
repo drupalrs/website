@@ -1,0 +1,19 @@
+uuid: ffd6820e-7bb5-4fc7-b0d5-58465da720f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - user
+id: user.field_podaci
+field_name: field_podaci
+entity_type: user
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

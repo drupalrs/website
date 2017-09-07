@@ -1,0 +1,5 @@
+name: Breadcrumb
+type: module
+description: 'My awesome Breadcrumb module.'
+package: Custom
+core: 8.x

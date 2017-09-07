@@ -1,0 +1,22 @@
+uuid: 8d283072-a33d-4226-8b2c-47e7a96a9442
+langcode: sr
+status: true
+dependencies:
+  theme:
+    - drupalrs
+_core:
+  default_config_hash: '-zB-kv1PgoLakNgUgaNyJccKj87SFgZkhNXC3MfBzDQ'
+id: drupalrs_local_tasks
+theme: drupalrs
+region: content
+weight: -11
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

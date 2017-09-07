@@ -1,0 +1,11 @@
+uuid: 29c9f65d-9d96-42cb-9e7b-f2ec3c89288e
+langcode: en
+status: true
+dependencies: {  }
+id: NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM
+label: 'http://drupalrs.studiopresent.dev/'
+chunks: 1
+links: 1
+max_filesize: 276
+context: {  }
+updated: 1497037788

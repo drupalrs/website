@@ -1,0 +1,224 @@
+.menu,
+.navigation {
+  @include clearfix;
+}
+
+/* admin navigation */
+.toolbar-lining {
+  a {
+    color: #565656 !important;
+  }
+}
+
+.block-drupalrs-main-menu {
+  $root: &;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: auto;
+  left: 0;
+  width: 250px;
+  transform: translateX(-250px);
+  transition: all 0.25s;
+  -webkit-overflow-scrolling: touch;
+  z-index: 9999;
+  background-color: $color-mobile-menu-bg;
+  box-sizing: border-box;
+  overflow: auto;
+  &__menu {
+    padding: 0;
+    margin: 0;
+    &-item {
+      margin: 0;
+      display: block;
+      list-style: none;
+      padding-top: 0;
+      border-bottom: 2px solid rgba(white, 0.1);
+      #{$root}__menu {
+        #{$root}__menu-item {
+          border-bottom: 0;
+          #{$root}__menu-item-link {
+            font-weight: 400;
+          }
+        }
+      }
+      &-link {
+        color: $color-mobile-menu-text !important;
+        display: block;
+        text-align: left;
+        padding: 12px;
+        font-weight: 700;
+        &.is-active {
+          color: $color-mobile-menu-text-active;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      li {
+        padding-left: 25px;
+      }
+    }
+  }
+  &.is-visible {
+    transform: translateX(0);
+    transition: all 0.25s;
+  }
+}
+
+.sliding-panel-fade-screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 18;
+  background-color: black;
+  transition: all 0.22s cubic-bezier(0.075, 0.82, 0.165, 1);
+  &.is-visible {
+    opacity: 0.4;
+    visibility: visible;
+    @media #{$Normal} {
+      visibility: hidden;
+    }
+  }
+}
+
+.mobile-hamburger {
+  display: block;
+  &__trigger {
+    margin: 0;
+    display: block;
+    padding: 12px 46px 12px 8px;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+    color: $color-mobile-menu-hamburger;
+  }
+  &__line {
+    background: $color-mobile-menu-hamburger;
+    height: 4px;
+    width: 24px;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 12px;
+    &--first {
+      top: 0px;
+    }
+    &--second {
+      top: 8px;
+    }
+    &--third {
+      top: 16px;
+    }
+  }
+}
+
+@media #{$Narrow} {
+  .block-drupalrs-main-menu {
+    text-align: right;
+    position: inherit;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    transform: none;
+    background-color: transparent;
+    z-index: inherit;
+    &__menu {
+      background-color: $color-navigation-bg;
+      box-sizing: border-box;
+      &-item {
+        display: inline-block;
+        margin-left: 4px;
+        background-color: $color-navigation-link-bg;
+        border-radius: 3px;
+        border-bottom: 0;
+        &-link {
+          color: $color-navigation-link !important;
+          font-weight: 500;
+          padding: 8px 12px;
+          &.is-active {
+            color: $color-navigation-link;
+          }
+        }
+        &:hover {
+          background-color: $color-red;
+          .block-drupalrs-main-menu__menu-item-link {
+            color: white !important;
+          }
+        }
+        &.block-drupalrs-main-menu__menu-item--expanded {
+          position: relative;
+          border-radius: 3px 3px 0 0;
+          .menu {
+            display: none;
+            z-index: 99;
+            padding: 0;
+            margin: 0;
+          }
+          > a {
+            &:after {
+              content: "";
+              margin-left: 4px;
+              display: inline-block;
+              vertical-align: middle;
+              width: 16px;
+              height: 10px;
+              background-image: url("../images/chevron-down.svg");
+              background-size: 16px 9px;
+              background-repeat: no-repeat;
+              background-position: top center;
+            }
+          }
+          &:hover {
+            a {
+              &:after {
+                background-image: url("../images/chevron-down-white.svg");
+              }
+            }
+          }
+        }
+        &:hover {
+          .menu {
+            position: absolute;
+            display: block;
+            padding: 4px 12px;
+            background-color: $color-red;
+            border-radius: 0 3px 3px 3px;
+            li {
+              width: 175px;
+              padding-left: 0;
+              margin-left: 0;
+              a {
+                padding-left: 5px;
+                color: rgba(white, 0.8) !important;
+                border-bottom: 1px solid rgba(white, 0.25);
+                font-size: 13px;
+                &:hover {
+                  background-color: $color-navigation-link-bg-active;
+                  color: white !important;
+                }
+              }
+              &:last-of-type {
+                a {
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .mobile-hamburger {
+    display: none;
+  }
+}

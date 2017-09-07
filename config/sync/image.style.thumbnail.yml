@@ -1,0 +1,37 @@
+uuid: e64219b8-3149-405d-8ecd-9dce62a4bb85
+langcode: sr
+status: true
+dependencies:
+  module:
+    - image_effects
+_core:
+  default_config_hash: cCiWdBHgLwj5omG35lsKc4LkW4MBdmcctkVop4ol5x0
+name: thumbnail
+label: 'Thumbnail (145×145)'
+effects:
+  f0c3164f-68f7-48e0-a9de-66869bbdefc2:
+    uuid: f0c3164f-68f7-48e0-a9de-66869bbdefc2
+    id: image_scale
+    weight: 2
+    data:
+      width: 145
+      height: 145
+      upscale: false
+  06f1142f-492a-482b-bba0-bd57eca9fb39:
+    uuid: 06f1142f-492a-482b-bba0-bd57eca9fb39
+    id: image_effects_set_canvas
+    weight: 3
+    data:
+      canvas_size: exact
+      exact:
+        width: '145'
+        height: '145'
+        placement: center-center
+        x_offset: 0
+        y_offset: 0
+      relative:
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+      canvas_color: ''

@@ -1,0 +1,31 @@
+{%
+set drupalrs_block = drupalrs_block ?: ('node-' ~ node.bundle ~ (view_mode != 'default' ? '-' ~ view_mode))|clean_class
+%}
+{%
+set classes = [
+drupalrs_block,
+node.isPromoted() ? drupalrs_block ~ '--promoted',
+node.isSticky() ? drupalrs_block ~ '--sticky',
+not node.isPublished() ? drupalrs_block ~ '--unpublished',
+]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {% block content %}
+
+    <div{{ content_attributes.addClass(drupalrs_block ~ '__content') }}>
+      {{ content.field_glavna_slika }}
+      {{ title_prefix }}
+      {% if not page %}
+        <h2{{ title_attributes.addClass(drupalrs_block ~ '__title') }}>{{ label }}</h2>
+      {% endif %}
+      {{ title_suffix }}
+      {{ content|without('links', 'field_glavna_slika') }}
+    </div>
+
+    {% if content.links %}
+      <div class="{{ drupalrs_block }}__links">
+        {{ content.links }}
+      </div>
+    {% endif %}
+  {% endblock %}
+</article>

@@ -1,0 +1,15 @@
+{%
+  set drupalrs_block = 'region region-' ~ region|clean_class
+%}
+{%
+  set classes = [
+    drupalrs_block,
+  ]
+%}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+{% endif %}

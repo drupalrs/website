@@ -1,0 +1,12 @@
+{%
+  set drupalrs_block = 'view-' ~ view.storage.id()|clean_class ~ '-' ~ view.current_display|clean_class
+%}
+{%
+  set drupalrs_element = drupalrs_block ~ '__grouping'
+%}
+<div class="{{ drupalrs_element }}">
+  {% block content %}
+    {{ title }}
+    {{ content }}
+  {% endblock %}
+</div>

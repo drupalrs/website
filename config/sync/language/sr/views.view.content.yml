@@ -1,0 +1,44 @@
+label: Sadržaj
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Poništite
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Rastuće
+          sort_desc_label: Opadajuće
+      fields:
+        title:
+          label: Naslov
+        name:
+          label: Autor
+        status:
+          label: Status
+          settings:
+            format_custom_true: Objavljeno
+        operations:
+          label: Operаcije
+      filters:
+        title:
+          expose:
+            label: Naslov
+        status:
+          expose:
+            label: Status
+          group_info:
+            group_items:
+              1:
+                title: Objavljeno
+        langcode:
+          expose:
+            label: Jezik
+      title: Sadržaj
+  page_1:
+    display_options:
+      menu:
+        title: Sadržaj
+      tab_options:
+        title: Sadržaj
+    display_title: Strana

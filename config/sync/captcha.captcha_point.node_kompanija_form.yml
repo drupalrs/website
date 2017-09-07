@@ -1,0 +1,7 @@
+uuid: 996fa16a-a2e8-4bcd-9e6a-b24c200163ba
+langcode: sr
+status: false
+dependencies: {  }
+formId: node_kompanija_form
+captchaType: default
+label: null

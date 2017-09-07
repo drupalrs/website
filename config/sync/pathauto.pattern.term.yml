@@ -1,0 +1,26 @@
+uuid: 51b2bdc6-e610-40a2-a90b-f089aa17e7a4
+langcode: sr
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: term
+label: Term
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:vocabulary]/[term:parent]/[term:name]'
+selection_criteria:
+  d8137dec-52ef-43f6-8c73-ae35e7ba0bfc:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      kategorija: kategorija
+      tagovi_za_dogadaje: tagovi_za_dogadaje
+      tagovi_za_poslove: tagovi_za_poslove
+      tags: tags
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: d8137dec-52ef-43f6-8c73-ae35e7ba0bfc
+selection_logic: and
+weight: -5
+relationships: {  }

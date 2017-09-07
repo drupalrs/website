@@ -1,0 +1,29 @@
+uuid: 3198cd86-5e86-49e9-89c2-73b36a4aeb19
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - drupalrs
+id: mainnavigation
+theme: drupalrs
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 2
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: "/zasto-drupal\r\n/zasto-drupal/*\r\n/o-zajednici\r\n/o-zajednici/*"
+    negate: false
+    context_mapping: {  }

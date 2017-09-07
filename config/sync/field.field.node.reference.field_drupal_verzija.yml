@@ -1,0 +1,23 @@
+uuid: 0f3c0e66-ae46-4798-a4da-1da01ee503a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_drupal_verzija
+    - node.type.reference
+  module:
+    - options
+id: node.reference.field_drupal_verzija
+field_name: field_drupal_verzija
+entity_type: node
+bundle: reference
+label: 'Drupal verzija'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '8'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

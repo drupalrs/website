@@ -1,0 +1,22 @@
+uuid: b5d62281-0864-415b-b3bd-2a2b75376f9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dogadaji
+id: node.dogadaji.promote
+field_name: promote
+entity_type: node
+bundle: dogadaji
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,22 @@
+uuid: 7aba35ba-a3db-4a42-90a7-615a258b2137
+langcode: sr
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - bartik
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: bartik_search
+theme: bartik
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Pretraga
+  provider: search
+  label_display: visible
+visibility: {  }

@@ -1,0 +1,30 @@
+uuid: b669c3b0-1fef-40e6-b119-96f206975309
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.poslovi
+  module:
+    - system
+    - views
+  theme:
+    - drupalrs
+id: views_block__poslovi_block_1
+theme: drupalrs
+region: content
+weight: -9
+provider: null
+plugin: 'views_block:poslovi-block_1'
+settings:
+  id: 'views_block:poslovi-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,17 @@
+uuid: 8e49eed4-5df7-41e1-91d9-3305cd80cfd1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Kompanija
+type: kompanija
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

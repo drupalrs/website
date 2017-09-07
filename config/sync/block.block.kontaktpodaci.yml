@@ -1,0 +1,31 @@
+uuid: 243d81b2-3bff-40c4-a4df-d7d46b38efad
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:58b68f3f-e735-4eed-a7fc-b9027106f2eb'
+  module:
+    - block_content
+    - system
+  theme:
+    - drupalrs
+id: kontaktpodaci
+theme: drupalrs
+region: sidebar_first
+weight: -12
+provider: null
+plugin: 'block_content:58b68f3f-e735-4eed-a7fc-b9027106f2eb'
+settings:
+  id: 'block_content:58b68f3f-e735-4eed-a7fc-b9027106f2eb'
+  label: 'Kontakt podaci'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /contact
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,11 @@
+uuid: 176a2451-b276-4952-86e5-cfbd3115d97d
+langcode: sr
+status: true
+dependencies:
+  config:
+    - node.type.kompanija
+id: node.kompanija
+target_entity_type_id: node
+target_bundle: kompanija
+default_langcode: site_default
+language_alterable: false

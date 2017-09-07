@@ -1,0 +1,24 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Potvrdite
+          reset_button_label: Poništite
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Rastuće
+          sort_desc_label: Opadajuće
+      filters:
+        access:
+          expose:
+            label: 'Poslednji pristup'
+            description: 'Za korisnika se pretpostavlja da je na vezi još dugo vremena posle pregledanja stranice.'
+      title: 'Ko je na portalu?'
+      header:
+        result:
+          content: 'Тренутно је @total корисника онлине.'
+  who_s_online_block:
+    display_title: 'Ko je na portalu?'
+    display_options:
+      block_description: 'Ko je na portalu?'
+      display_description: 'Листа корисника који су тренутно улоговани.'

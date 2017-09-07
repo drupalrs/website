@@ -1,0 +1,922 @@
+.node-page-full {
+
+  &__content {
+
+  }
+  &__title {
+    font-size: 36px;
+  }
+}
+
+.node-kompanija-teaser {
+  &__content {
+
+  }
+  &__title {
+
+  }
+  &__title-link {
+  }
+  &__field-webstranica,
+  &__field-telefon,
+  &__field-adresa {
+    margin-bottom: 8px;
+    padding-left: 24px;
+    background-size: 16px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    display: block;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+  &__field-adresa {
+    background-image: url("../images/version.svg");
+  }
+  &__field-telefon {
+    background-image: url("../images/version.svg");
+  }
+  &__field-webstranica {
+    background-image: url("../images/globe.svg");
+  }
+}
+
+.node-kompanija-full {
+  &__content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-column-gap: 0;
+    grid-row-gap: 15px;
+    align-items: start;
+    @media #{$Narrow} {
+      grid-template-columns: 185px auto;
+    }
+  }
+  &__title {
+    font-size: 36px;
+  }
+  &__field-logo {
+    width: 145px;
+    height: 145px;
+    position: relative;
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  &__field-galerija {
+    margin-top: 24px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    img {
+      display: block;
+      border-radius: 3px;
+      height: 100%;
+    }
+    &-item {
+      width: 48%;
+      margin-top: 12px;
+      @media #{$Narrow} {
+        width: 100%;
+        margin-top: 24px;
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  [class^="node-kompanija"] {
+    &[class$="label"] {
+      font-weight: 500;
+      margin-top: 18px;
+      margin-bottom: 2px;
+    }
+    &[class$="item"] {
+      a {
+        font-style: italic;
+      }
+    }
+  }
+  &__column {
+    &-3 {
+      @media #{$Narrow} {
+        border-left: 2px solid $color-ash;
+        margin-left: 30px;
+        padding-left: 30px;
+      }
+    }
+  }
+  [class*="column"] {
+    h3 {
+      color: $color-blue;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 16px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      font-weight: 400;
+    }
+    margin-bottom: 24px;
+    @media #{$Narrow} {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.block-views-block--kompanije-block-1 {
+  background-color: white;
+  padding: 24px;
+  border-radius: 3px;
+  @media #{$Narrow} {
+    padding: 48px;
+  }
+
+  .node-kompanija-full {
+    &__content {
+
+    }
+    &__title {
+      margin-bottom: 24px;
+      font-size: 24px;
+      a {
+        color: #222222;
+      }
+      @media #{$Narrow} {
+        grid-column: 1 / 4;
+      }
+    }
+  }
+}
+
+.user-user-full {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-row-gap: 15px;
+  align-items: start;
+  @media #{$Narrow} {
+    grid-template-columns: 145px 400px auto;
+  }
+  [class^="user-user"] {
+    &[class$="label"] {
+      font-weight: 500;
+      margin-top: 18px;
+      margin-bottom: 2px;
+    }
+    &[class$="item"] {
+      a {
+        font-style: italic;
+      }
+    }
+  }
+  &__column-1 {
+    margin-bottom: 24px;
+    @media #{$Narrow} {
+      margin-bottom: 0;
+    }
+  }
+  &__column-2 {
+    @media #{$Narrow} {
+      border-left: 2px solid $color-ash;
+      margin: 0 60px 0 30px;
+      padding-left: 30px;
+    }
+  }
+  [class*="column"] {
+    h3 {
+      color: $color-blue;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+  }
+  &__user-picture {
+    margin-bottom: 24px;
+  }
+  .label {
+    font-family: $ubuntu;
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-text;
+  }
+  &__field-drupal-profil {
+    word-wrap: break-word;
+  }
+}
+
+.node-dogadaji-full {
+  &__content {
+    display: grid;
+    align-items: start;
+    @media #{$Narrow} {
+      grid-template-columns: 145px auto;
+      grid-template-rows: auto;
+      grid-column-gap: 0;
+      grid-row-gap: 15px;
+    }
+  }
+  &__title {
+    font-size: 36px;
+  }
+  &__field-glavna-slika {
+    width: 145px;
+    height: 145px;
+    position: relative;
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  &__field-galerija {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 36px;
+    &-item {
+      max-width: 24%;
+      margin-right: 18px;
+      img {
+        border-radius: 3px;
+      }
+    }
+  }
+  [class^="node-dogadaji"] {
+    &[class$="label"] {
+      font-weight: 500;
+      margin-top: 18px;
+      margin-bottom: 2px;
+    }
+    &[class$="item"] {
+      a {
+        font-style: italic;
+      }
+    }
+  }
+  &__column {
+    &-1 {
+      @media #{$Narrow} {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+    }
+    &-2 {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      margin-top: 36px;
+      @media #{$Narrow} {
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+        border-left: 2px solid $color-ash;
+        margin-left: 30px;
+        padding-left: 30px;
+        margin-top: 0;
+      }
+      ul {
+        padding: 0;
+        @media #{$Narrow} {
+          padding-left: 30px;
+        }
+        li {
+          padding: 4px 0;
+        }
+      }
+    }
+  }
+  [class*="column"] {
+    h3 {
+      color: $color-blue;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.node-blog-full {
+  &__summary {
+    font-size: 18px;
+    margin-bottom: 24px;
+    line-height: 26px;
+    color: rgba(black, 0.5);
+    padding-bottom: 24px;
+    border-bottom: 2px solid $color-ash;
+    @media #{$Narrow} {
+      width: 75%;
+    }
+  }&__field-tagovi {
+     font-size: 13px;
+     padding-left: 28px;
+     font-weight: 500;
+     background-image: url("../images/tags.svg");
+     background-size: 18px;
+     background-position: left center;
+     background-repeat: no-repeat;
+     &-item {
+       display: inline-block;
+       color: #999999;
+       a {
+         color: #999999;
+         &:hover {
+           color: $color-blue;
+         }
+       }
+     }
+   }
+  &__title {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 12px;
+  }
+  &__field-galerija {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &-item {
+      width: 24%;
+      img {
+        border-radius: 3px;
+      }
+    }
+  }
+  &__meta {
+    color: #444444;
+    margin-bottom: 32px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  &__submitted {
+    &-date {
+      margin-right: 4px;
+    }
+    &-author {
+      margin-left: 4px;
+      [property="schema:name"] {
+        font-style: italic;
+        color: $color-blue;
+      }
+    }
+  }
+}
+
+.node--type-blog {
+  .region-content {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+
+    .node-blog-full__glavna-slika {
+      img {
+        display: block;
+        width: 100%;
+        border-radius: 3px 3px 0 0;
+      }
+    }
+
+    .node-blog-full__inner {
+      background-color: white;
+      border-radius: 0 0 3px 3px;
+      padding: 24px;
+      @media #{$Narrow} {
+        padding: 48px;
+      }
+    }
+  }
+}
+
+.node-poslovi-full {
+  &__content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-column-gap: 0;
+    grid-row-gap: 15px;
+    align-items: start;
+    grid-auto-flow: column;
+    @media #{$Narrow} {
+      grid-template-columns: 145px 300px auto;
+    }
+  }
+  &__column {
+    &-1 {
+      grid-column: 1 / 2;
+    }
+    &-2 {
+      grid-column: 1 / 2;
+      @media #{$Narrow} {
+        grid-column: 2 / 4;
+        border-left: 2px solid $color-ash;
+        margin-left: 30px;
+        padding-left: 30px;
+      }
+      ul {
+        padding: 0;
+        @media #{$Narrow} {
+          padding-left: 30px;
+        }
+        li {
+          padding: 4px 0;
+        }
+      }
+    }
+  }
+  &__user {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    .user-user-compact {
+      &__user-picture {
+        margin-bottom: 8px;
+      }
+      &__field-podaci {
+        .given-name {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  &__skills {
+    margin-top: 16px;
+    p {
+      font-weight: 500;
+    }
+    margin-bottom: -24px;
+  }
+  [class^="node-poslovi"] {
+    &[class$="label"] {
+      font-weight: 500;
+      margin-top: 18px;
+      margin-bottom: 2px;
+    }
+  }
+  [class*="column"] {
+    max-width: 100%;
+    h3 {
+      color: $color-blue;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+  }
+  &__field-tagovi-poslovi {
+    margin-bottom: 16px;
+    &-item {
+      display: inline;
+      &:after {
+        content: "•";
+        color: $color-blue;
+        margin: 0 4px;
+      }
+      &:last-of-type {
+        &:after {
+          content: "";
+        }
+      }
+      a {
+        pointer-events: none;
+        color: $color-text;
+      }
+    }
+    @media #{$Narrow} {
+      &-item {
+        display: block;
+        margin-bottom: 4px;
+        &:before {
+          content: "•";
+          color: $color-blue;
+          margin: 0 8px 0 0;
+        }
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.path-frontpage {
+  .view-frontpage-page-1__row {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+
+    .node-blog-teaser {
+      &__glavna-slika {
+        img {
+          display: block;
+          width: 100%;
+          border-radius: 3px 3px 0 0;
+        }
+      }
+      &__inner {
+        background-color: white;
+        border-radius: 0 0 3px 3px;
+        padding: 24px;
+        @media #{$Narrow} {
+          padding: 48px;
+        }
+      }
+      &__title {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 10px;
+        a {
+          color: #222222;
+          &:hover {
+            text-decoration: none;
+            color: $color-red;
+          }
+        }
+      }
+      &__body {
+        line-height: 22px;
+      }
+      &__meta {
+        color: #444444;
+        margin-bottom: 32px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      &__submitted {
+        &-date {
+          margin-right: 4px;
+        }
+        &-author {
+          margin-left: 4px;
+          [property="schema:name"] {
+            font-style: italic;
+            color: $color-blue;
+          }
+        }
+      }
+      &__content {
+        margin-bottom: 32px;
+      }
+      &__field-tagovi {
+        font-size: 13px;
+        padding-left: 28px;
+        font-weight: 500;
+        background-image: url("../images/tags.svg");
+        background-size: 18px;
+        background-position: left center;
+        background-repeat: no-repeat;
+        &-item {
+          display: inline-block;
+          color: #999999;
+          a {
+            color: #999999;
+            &:hover {
+              color: $color-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.path-blog {
+  .view-blog-page-1 {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    &__row {
+      margin-bottom: 24px;
+    }
+    .node-blog-teaser {
+      &__glavna-slika {
+        img {
+          display: block;
+          width: 100%;
+          border-radius: 3px 3px 0 0;
+        }
+      }
+      &__inner {
+        background-color: white;
+        border-radius: 0 0 3px 3px;
+        padding: 24px;
+        @media #{$Narrow} {
+          padding: 48px;
+        }
+      }
+      &__title {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 10px;
+        a {
+          color: #222222;
+          &:hover {
+            text-decoration: none;
+            color: $color-red;
+          }
+        }
+      }
+      &__body {
+        line-height: 22px;
+      }
+      &__meta {
+        color: #444444;
+        margin-bottom: 32px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      &__submitted {
+        &-date {
+          margin-right: 4px;
+        }
+        &-author {
+          margin-left: 4px;
+          [property="schema:name"] {
+            font-style: italic;
+            color: $color-blue;
+          }
+        }
+      }
+      &__content {
+        margin-bottom: 32px;
+      }
+      &__field-tagovi {
+        font-size: 13px;
+        padding-left: 28px;
+        font-weight: 500;
+        background-image: url("../images/tags.svg");
+        background-size: 18px;
+        background-position: left center;
+        background-repeat: no-repeat;
+        &-item {
+          display: inline-block;
+          color: #999999;
+          a {
+            color: #999999;
+            &:hover {
+              color: $color-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.path-taxonomy {
+  .view-taxonomy-term-page-1__row {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+
+    .node-blog-teaser {
+      &__glavna-slika {
+        img {
+          display: block;
+          width: 100%;
+          border-radius: 3px 3px 0 0;
+        }
+      }
+      &__inner {
+        background-color: white;
+        border-radius: 0 0 3px 3px;
+        padding: 24px;
+        @media #{$Narrow} {
+          padding: 48px;
+        }
+      }
+      &__title {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 10px;
+        a {
+          color: #222222;
+          &:hover {
+            text-decoration: none;
+            color: $color-red;
+          }
+        }
+      }
+      &__body {
+        line-height: 22px;
+      }
+      &__meta {
+        color: #444444;
+        margin-bottom: 32px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      &__submitted {
+        &-date {
+          margin-right: 4px;
+        }
+        &-author {
+          margin-left: 4px;
+          [property="schema:name"] {
+            font-style: italic;
+            color: $color-blue;
+          }
+        }
+      }
+      &__content {
+        margin-bottom: 32px;
+      }
+      &__field-tagovi {
+        font-size: 13px;
+        padding-left: 28px;
+        font-weight: 500;
+        background-image: url("../images/tags.svg");
+        background-size: 18px;
+        background-position: left center;
+        background-repeat: no-repeat;
+        &-item {
+          display: inline-block;
+          color: #999999;
+          a {
+            color: #999999;
+            &:hover {
+              color: $color-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.context__04 {
+  .block-drupalrs-page-title {
+    display: none;
+  }
+
+  p {
+    text-align: center;
+
+    &:first-of-type {
+      margin-top: 48px;
+      font-family: $merriweather;
+      font-size: 24px;
+    }
+
+    & + p {
+      @extend %button;
+    }
+  }
+}
+
+.node-poslovi-teaser {
+  &__title {
+    color: $color-blue;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: $merriweather;
+    margin-bottom: 4px;
+  }
+  &__title-link {
+    box-sizing: border-box;
+    border: 1px solid $color-ash;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 3px;
+    padding: 24px;
+    margin-bottom: 24px;
+    display: block;
+    height: 90%;
+    color: $color-text !important;
+    background-color: white;
+    &:after {
+      content: "";
+      border-radius: 5px;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      opacity: 0;
+      -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    &:hover {
+      transform: scale(1);
+      text-decoration: none;
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  &__field-tagovi-poslovi {
+    &-item {
+      display: inline-block;
+      color: #999999;
+      a {
+        pointer-events: none;
+        color: #999999;
+      }
+      &:after {
+        content: " -"
+      }
+      &:last-of-type {
+        &:after {
+          content: "";
+        }
+      }
+    }
+    margin-bottom: 18px;
+  }
+  &__body {
+    line-height: 22px;
+    margin-bottom: 16px;
+    p {
+      margin-bottom: 0;
+      line-height: 22px;
+    }
+  }
+  &__field-kompanija {
+    background-image: url("../images/building.svg");
+    display: inline-block;
+    margin: 0 16px 4px 0;
+    pointer-events: none;
+    a {
+      color: $color-text;
+    }
+  }
+  &__field-user {
+    background-image: url("../images/user-2.svg");
+    display: inline-block;
+    margin: 0 16px 4px 0;
+    pointer-events: none;
+    a {
+      color: $color-text;
+    }
+  }
+  &__field-adresa {
+    background-image: url("../images/map.svg");
+    display: inline-block;
+    br {
+      display: none;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    .locality {
+      &:after {
+        content: ", ";
+      }
+    }
+  }
+  &__field-kompanija,
+  &__field-adresa,
+  &__field-user {
+    padding-left: 24px;
+    background-size: 16px;
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+}
+
+.node-reference-teaser {
+  &__content {
+  }
+  &__field-glavna-slika {
+    margin-bottom: 12px;
+  }
+  &__title {
+    font-size: 18px;
+    margin-bottom: 4px;
+
+  }
+  &__field-drupal-verzija,
+  &__field-webstranica {
+    padding-left: 24px;
+    background-size: 16px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    display: block;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+  &__field-drupal-verzija {
+    margin-bottom: 8px;
+    background-image: url("../images/version.svg");
+  }
+  &__field-webstranica {
+    background-image: url("../images/globe.svg");
+  }
+}

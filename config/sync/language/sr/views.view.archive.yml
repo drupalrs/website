@@ -1,0 +1,21 @@
+description: 'Сав садржај, по месецу.'
+display:
+  default:
+    display_options:
+      title: 'Mesečna arhiva'
+      exposed_form:
+        options:
+          submit_button: Potvrdite
+          reset_button_label: Poništite
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Rastuće
+          sort_desc_label: Opadajuće
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Stavki po stranici'
+            items_per_page_options_all_label: '- Sve -'
+  block_1:
+    display_title: Blok
+  page_1:
+    display_title: Strana

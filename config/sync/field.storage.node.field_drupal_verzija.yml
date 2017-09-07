@@ -1,0 +1,33 @@
+uuid: 05f03e98-f5c7-4182-a440-8d36520adadc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_drupal_verzija
+field_name: field_drupal_verzija
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '6'
+      label: 6.x
+    -
+      value: '7'
+      label: 7.x
+    -
+      value: '8'
+      label: 8.x
+    -
+      value: '9'
+      label: 9.x
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

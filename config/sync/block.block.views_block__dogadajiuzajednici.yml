@@ -1,0 +1,30 @@
+uuid: 09804d54-efc9-452b-b7fd-f690f3efe02c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.dogadaji
+  module:
+    - system
+    - views
+  theme:
+    - drupalrs
+id: views_block__dogadajiuzajednici
+theme: drupalrs
+region: postfix_second
+weight: -13
+provider: null
+plugin: 'views_block:dogadaji-block_1'
+settings:
+  id: 'views_block:dogadaji-block_1'
+  label: 'Događaji u zajednici'
+  provider: views
+  label_display: visible
+  views_label: 'Događaji u zajednici'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

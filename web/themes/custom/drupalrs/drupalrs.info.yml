@@ -1,0 +1,41 @@
+name: Drupal.rs zvaniačan sajt zajednice
+type: theme
+description: Theme made from SP starter theme for drupal.
+package: Core
+
+force_export: false
+inherit_layout: false
+scss_support: false
+libraries:
+  - drupalrs/drupalrs
+regions:
+  branding: 'Branding'
+  user_navigation: 'User Navigation'
+  search: 'Search'
+  highlighted_links: 'Highlighted Links'
+  navigation: 'Navigation'
+  header: 'Header'
+  highlighted: 'Highlighted'
+  sidebar_first: 'Sidebar First'
+  content: 'Content'
+  sidebar_second: 'Sidebar Second'
+  postfix_first: 'Postfix First'
+  postfix_second: 'Postfix Second'
+  postfix_third: 'Postfix Third'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  footer_third: 'Footer Third'
+  footer_fourth: 'Footer Fourth'
+  footer_fifth: 'Footer Fifth'
+features:
+  logo: true
+  name: true
+  slogan: true
+  node_user_picture: true
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  main_menu: true
+  secondary_menu: true
+version: 8.x-1.x
+core: 8.x

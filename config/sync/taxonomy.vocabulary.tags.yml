@@ -1,0 +1,11 @@
+uuid: b5438f68-3bac-4538-8f6a-5d23fb5d2d8e
+langcode: sr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lO5ziR5dVI1PpEeHZsSOfQ-Y7NWihSDKW8-MMf6uoms
+name: Tagovi
+vid: tags
+description: 'Use tags to group articles on similar topics into categories.'
+hierarchy: 0
+weight: 0

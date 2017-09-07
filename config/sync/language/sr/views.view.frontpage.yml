@@ -1,0 +1,20 @@
+display:
+  default:
+    display_options:
+      empty:
+        title:
+          title: 'Dobrodošli na [site:name]'
+      exposed_form:
+        options:
+          submit_button: Potvrdite
+          reset_button_label: Poništite
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Rastuće
+          sort_desc_label: Opadajuće
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Stavki po stranici'
+            items_per_page_options_all_label: '- Sve -'
+  page_1:
+    display_title: Strana

@@ -1,0 +1,21 @@
+.block-drupalrs-local-tasks {
+ .tabs {
+   margin-bottom: 24px;
+   &__item {
+     margin: 0 12px 16px 0;
+     @media #{$Narrow} {
+       margin-bottom: 0;
+     }
+     &--is-active {
+      border-left-color: $color-red;
+     }
+     &:hover {
+       border-left-color: $color-blue;
+     }
+     a {
+       background-color: white;
+       padding: 4px 12px;
+     }
+   }
+ }
+}

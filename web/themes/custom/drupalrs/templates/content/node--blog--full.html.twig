@@ -1,0 +1,58 @@
+{% set drupalrs_block = drupalrs_block ?: ('node-' ~ node.bundle ~ (view_mode != 'default' ? '-' ~ view_mode))|clean_class %}
+{% set classes = [
+drupalrs_block,
+node.isPromoted() ? drupalrs_block ~ '--promoted',
+node.isSticky() ? drupalrs_block ~ '--sticky',
+not node.isPublished() ? drupalrs_block ~ '--unpublished',
+] %}
+<article{{ attributes.addClass(classes) }}>
+  {% block content %}
+
+    {% if content.field_glavna_slika %}
+      <div class="{{ drupalrs_block }}__glavna-slika">{{ content.field_glavna_slika }}</div>
+    {% endif %}
+
+    <div class="{{ drupalrs_block }}__inner">
+
+      <h1 class="{{ drupalrs_block }}__title">
+        {{ label }}
+      </h1>
+
+      {% if display_submitted %}
+        <footer class="{{ drupalrs_block }}__meta">
+          <div{{ author_attributes.addClass(drupalrs_block ~ '__submitted') }}>
+            <span class="{{ drupalrs_block }}__submitted-date">{{ node.getCreatedTime|date('j. F Y.') }}</span> • <span
+                class="{{ drupalrs_block }}__submitted-author">Objavio: {{ author_name }}</span>
+            {{ metadata }}
+          </div>
+        </footer>
+      {% endif %}
+
+      {% if node.body.summary %}
+        <div class="{{ drupalrs_block }}__summary">{{ node.body.summary }}</div>
+      {% endif %}
+
+      <div{{ content_attributes.addClass(drupalrs_block ~ '__content') }}>
+        {{ title_prefix }}
+        {% if not page %}
+          <h2{{ title_attributes.addClass(drupalrs_block ~ '__title') }}>
+            <a class="{{ drupalrs_block }}__title-link" href="{{ url }}" rel="bookmark">{{ label }}</a>
+          </h2>
+        {% endif %}
+        {{ title_suffix }}
+        {{ content|without('links', 'node.body.summary', 'field_tagovi', 'field_glavna_slika') }}
+      </div>
+
+      {% if content.field_tagovi %}
+        <div class="{{ drupalrs_block }}__tags">{{ content.field_tagovi }}</div>
+      {% endif %}
+
+      {% if content.links %}
+        <div class="{{ drupalrs_block }}__links">
+          {{ content.links }}
+        </div>
+      {% endif %}
+
+    </div>
+  {% endblock %}
+</article>

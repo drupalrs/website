@@ -1,0 +1,17 @@
+{% if breadcrumb %}
+  {% set id = 'breadcrumb'|clean_id %}
+  <nav class="breadcrumb" aria-labelledby="{{ id }}">
+    <ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+    {% for item in breadcrumb %}
+      <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        {% if item.url %}
+          <a class="breadcrumb__item-link" href="{{ item.url }}"itemprop="item"><span itemprop="name">{{ item.text }}</span></a>
+        {% else %}
+          <span class="breadcrumb__item-link breadcrumb__item-link--text"itemprop="name">{{ item.text }}</span>
+        {% endif %}
+        <meta itemprop="position" content="{{ loop.index }}" />
+      </li>
+    {% endfor %}
+    </ol>
+  </nav>
+{% endif %}

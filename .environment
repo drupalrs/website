@@ -1,0 +1,11 @@
+# Statements in this file will be executed (sourced) by the shell in SSH
+# sessions, in deploy hooks, in cron jobs, and in the application's runtime
+# environment.
+
+# Allow executable app dependencies from Composer to be run from the path.
+# Enterprise has a slightly different set of include paths.
+if [ "${PLATFORM_MODE}" == "enterprise" ]; then
+  export PATH="/app/${PLATFORM_PROJECT}/vendor/bin:${PATH}"
+else
+  export PATH=/app/vendor/bin:$PATH
+fi

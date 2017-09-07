@@ -1,0 +1,27 @@
+{% set drupalrs_block = drupalrs_block ?: ('node-' ~ node.bundle ~ (view_mode != 'default' ? '-' ~ view_mode))|clean_class %}
+{% set classes = [
+drupalrs_block,
+node.isPromoted() ? drupalrs_block ~ '--promoted',
+node.isSticky() ? drupalrs_block ~ '--sticky',
+not node.isPublished() ? drupalrs_block ~ '--unpublished',
+] %}
+<a class="{{ drupalrs_block }}__title-link" href="{{ url }}" rel="bookmark">
+  <article{{ attributes.addClass(classes) }}>
+    {% block content %}
+
+      <div{{ content_attributes.addClass(drupalrs_block ~ '__content') }}>
+        {{ title_prefix }}
+        {% if not page %}
+          <h2{{ title_attributes.addClass(drupalrs_block ~ '__title') }}>
+            <span>{{ label }}</span>
+          </h2>
+        {% endif %}
+        {% if content.field_datum_i_vreme %}
+          {{ content.field_datum_i_vreme }}
+        {% endif %}
+        {{ title_suffix }}
+        {{ content|without('links', 'field_datum_i_vreme') }}
+      </div>
+    {% endblock %}
+  </article>
+</a>

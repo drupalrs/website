@@ -1,0 +1,22 @@
+uuid: 428b7042-20d8-4ec0-95ad-7509eba884c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.kompanija
+id: node.kompanija.promote
+field_name: promote
+entity_type: node
+bundle: kompanija
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

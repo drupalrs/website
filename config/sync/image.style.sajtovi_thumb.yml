@@ -1,0 +1,35 @@
+uuid: 33531295-6c95-4a1f-ad80-c189bcc4487c
+langcode: sr
+status: true
+dependencies:
+  module:
+    - image_effects
+name: sajtovi_thumb
+label: 'Sajtovi thumb (240x180)'
+effects:
+  daf03348-bf4a-4cf6-a5a1-79ee05163808:
+    uuid: daf03348-bf4a-4cf6-a5a1-79ee05163808
+    id: image_scale
+    weight: 2
+    data:
+      width: 240
+      height: 180
+      upscale: false
+  5248ce78-9bc6-45fc-9268-fafb4e3149a5:
+    uuid: 5248ce78-9bc6-45fc-9268-fafb4e3149a5
+    id: image_effects_set_canvas
+    weight: 3
+    data:
+      canvas_size: exact
+      exact:
+        width: '240'
+        height: '180'
+        placement: center-center
+        x_offset: 0
+        y_offset: 0
+      relative:
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+      canvas_color: ''

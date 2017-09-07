@@ -1,0 +1,28 @@
+{% set classes = classes ?: [
+    drupalrs_block,
+    not items ? drupalrs_block ~ '--empty'
+  ]
+%}
+{% set list_classes = list_classes ?: [drupalrs_block ~ '__list'] %}
+{% set item_classes = item_classes ?: [drupalrs_block ~ '__list-item'] %}
+{%- if items or empty %}
+
+  <div class="{{ classes|join(' ') }}">
+    {%- if title is not empty -%}
+      <h3 class="{{ drupalrs_block }}__title">{{ title }}</h3>
+    {%- endif -%}
+    {%- if items %}
+
+      <{{ list_type }}{{ attributes.addClass(list_classes) }}>
+        {%- for item in items %}
+
+          <li{{ item.attributes.addClass(item_classes) }}>{{ item.value }}</li>
+        {%- endfor %}
+
+      </{{ list_type }}>
+    {%- else -%}
+      {{- empty -}}
+    {%- endif %}
+
+  </div>
+{%- endif %}

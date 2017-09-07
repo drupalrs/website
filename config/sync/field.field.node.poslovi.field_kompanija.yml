@@ -1,0 +1,29 @@
+uuid: a09214a2-30df-4b8e-b752-bcbbc91176f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kompanija
+    - node.type.kompanija
+    - node.type.poslovi
+id: node.poslovi.field_kompanija
+field_name: field_kompanija
+entity_type: node
+bundle: poslovi
+label: Kompanija
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      kompanija: kompanija
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

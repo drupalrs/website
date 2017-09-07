@@ -1,0 +1,74 @@
+uuid: b3da443e-e782-4155-9244-b9d91bee7393
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.dogadaji.body
+    - field.field.node.dogadaji.field_adresa
+    - field.field.node.dogadaji.field_datum_i_vreme
+    - field.field.node.dogadaji.field_datum_i_vreme_do
+    - field.field.node.dogadaji.field_galerija
+    - field.field.node.dogadaji.field_glavna_slika
+    - field.field.node.dogadaji.field_tagovi
+    - node.type.dogadaji
+  module:
+    - address
+    - datetime
+    - text
+    - user
+id: node.dogadaji.teaser
+targetEntityType: node
+bundle: dogadaji
+mode: teaser
+content:
+  body:
+    label: above
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_adresa:
+    type: address_default
+    weight: 3
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_datum_i_vreme:
+    type: datetime_custom
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: timestamp
+    third_party_settings: {  }
+  field_datum_i_vreme_do:
+    type: datetime_default
+    weight: 5
+    region: content
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+  field_tagovi:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_galerija: true
+  field_glavna_slika: true
+  langcode: true

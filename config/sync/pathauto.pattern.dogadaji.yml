@@ -1,0 +1,22 @@
+uuid: 018f94fc-d27d-453b-84ec-766468d5f91a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: dogadaji
+label: Događaji
+type: 'canonical_entities:node'
+pattern: 'dogadjaji/[node:title]'
+selection_criteria:
+  2f4f8413-bfa9-4309-a453-ac117f95f5bc:
+    id: node_type
+    bundles:
+      dogadaji: dogadaji
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 2f4f8413-bfa9-4309-a453-ac117f95f5bc
+selection_logic: and
+weight: -5
+relationships: {  }

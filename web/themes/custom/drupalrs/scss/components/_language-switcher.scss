@@ -1,0 +1,21 @@
+.block-language .block__content {
+  position: relative;
+  ul.links {
+    margin: 0;
+    position: absolute;
+    height: 25px;
+    li {
+      background-color: $color-lang-switcher-bg;
+      display: none;
+      padding: 5px 10px;
+      &:first-child {
+        display: block;
+      }
+    }
+    &:hover {
+      li {
+        display: block;
+      }
+    }
+  }
+}

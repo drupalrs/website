@@ -1,0 +1,17 @@
+{% set drupalrs_block = drupalrs_block ?: ('view-' ~ view.storage.id() ~ '-' ~ view.current_display)|clean_class %}
+{% set drupalrs_element = drupalrs_block ~ '__row' %}
+<div class="{{ drupalrs_block }}__rows">
+  {% if title %}
+    <h3 class="{{ drupalrs_block }}__rows-title">{{ title }}</h3>
+  {% endif %}
+  {% block content %}
+    {% for row in rows %}
+      {% set row_classes = [
+      default_row_class ? drupalrs_element,
+      ] %}
+      <div{{ row.attributes.addClass(row_classes) }}>
+        {{ row.content }}
+      </div>
+    {% endfor %}
+  {% endblock %}
+</div>

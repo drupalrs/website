@@ -1,0 +1,41 @@
+// move the "bar" to the left of the messages inside the box
+// rather than using box shadow
+
+.messages {
+  background: no-repeat 10px 17px;  /* LTR */
+  border: solid;
+  border-width: 1px 1px 1px 0;  /* LTR */
+  border-radius: 2px;
+  border-color: #ccc;
+  padding: 15px 20px 15px 35px; /* LTR */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin-top: 20px;
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.messages--warning {
+  box-shadow: none;
+  border-left: 8px solid #E09600;
+}
+
+.messages--status {
+  box-shadow: none;
+  border-left: 8px solid #77B259;
+}
+
+.messages--error {
+  box-shadow: none;
+  border-left: 8px solid #E62600;
+}
+
+.messages--success {
+  box-shadow: none;
+  border-left-width: 8px;
+  border-color: darken(#D9EDF7, 20%);
+  background-color: #D9EDF7;
+}

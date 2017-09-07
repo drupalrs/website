@@ -1,0 +1,116 @@
+//body font size
+body {
+  font-size: $size-mob-font;
+  color: $color-text;
+  font-family: $body-font;
+  padding: 0;
+  margin: 0;
+  line-height: 1.58;
+  padding-top: 59px;
+  @media #{$Narrow}  {
+    padding-top: 0;
+  }
+}
+
+//== heading
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-title;
+  font-weight: bold;
+  font-family: $header-font;
+}
+
+h1 {
+  font-size: $size-mob-h1;
+  @media #{$Normal} {
+    font-size: $size-h1;
+  }
+  margin: 0 0 30px;
+}
+
+h2 {
+  font-size: $size-mob-h2;
+  @media #{$Normal}  {
+    font-size: $size-h2;
+  }
+  margin: 0 0 36px;
+}
+
+h3 {
+  font-size: $size-mob-h3;
+  @media #{$Normal}  {
+    font-size: $size-h3;
+  }
+  margin: 0 0 10px;
+}
+
+h4 {
+  font-size: $size-mob-h4;
+  @media #{$Normal}  {
+    font-size: $size-h4;
+  }
+  margin: 0 0 5px;
+}
+
+h5 {
+  font-size: $size-mob-h5;
+  @media #{$Normal}  {
+    font-size: $size-h5;
+  }
+  margin: 0 0 15px;
+}
+
+h6 {
+  font-size: $size-mob-h6;
+  @media #{$Normal}  {
+    font-size: $size-h6;
+  }
+  margin: 0 0 10px;
+}
+
+//== links
+a,
+a:hover,
+a:visited,
+a:focus {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: $color-link;
+}
+
+a:hover,
+a:focus {
+  color: $color-link-hover;
+}
+
+//== paragraph
+p {
+  margin: 0 0 15px 0;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+//== lists
+ul {
+  list-style-position: inside;
+}
+
+ul, ol {
+  li {
+    line-height: 1.4em;
+  }
+}
+
+//== responsive img
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input, select, textarea {
+  font-family: $ubuntu;
+}

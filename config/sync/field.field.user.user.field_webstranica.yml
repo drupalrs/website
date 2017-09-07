@@ -1,0 +1,23 @@
+uuid: 2ccfe656-5643-49c2-b1f0-feb9ecfb9534
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_webstranica
+  module:
+    - link
+    - user
+id: user.user.field_webstranica
+field_name: field_webstranica
+entity_type: user
+bundle: user
+label: 'Web stranica'
+description: 'Putanja do web stranice, personalne ili webstranice kompanije u kojoj ste zaposleni.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link
