@@ -45,7 +45,9 @@
         "drupal/image_effects": "^1.0",
         "drupal/address": "~1.0.0",
         "drupal/colorbox": "^1.4",
-        "drupal/rules": "^3.0@alpha"
+        "drupal/rules": "^3.0@alpha",
+        "drupal/honeypot": "^1.27",
+        "drupal/recaptcha": "^2.2"
     },
     "require-dev": {
         "behat/mink": "~1.7",

@@ -8,6 +8,7 @@ module:
   block_content: 0
   breadcrumb: 0
   breakpoint: 0
+  captcha: 0
   ckeditor: 0
   color: 0
   colorbox: 0
@@ -32,6 +33,7 @@ module:
   google_analytics: 0
   help: 0
   history: 0
+  honeypot: 0
   image: 0
   image_effects: 0
   kint: 0
@@ -51,6 +53,7 @@ module:
   pathauto: 0
   quickedit: 0
   rdf: 0
+  recaptcha: 0
   redirect: 0
   redirect_404: 0
   rules: 0
