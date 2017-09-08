@@ -1,0 +1,26 @@
+uuid: 437ceac4-ef5e-4780-b70a-debf54771120
+langcode: sr
+status: true
+dependencies:
+  module:
+    - language
+    - user
+id: user_url
+label: 'User url'
+type: 'canonical_entities:user'
+pattern: 'korisnik/[user:name]'
+selection_criteria:
+  aaa71f24-ce64-4338-9707-761e6e1b6623:
+    id: language
+    langcodes:
+      en: en
+      sr: sr
+    negate: false
+    context_mapping:
+      language: 'user:langcode:language'
+    uuid: aaa71f24-ce64-4338-9707-761e6e1b6623
+selection_logic: and
+weight: -5
+relationships:
+  'user:langcode:language':
+    label: Language

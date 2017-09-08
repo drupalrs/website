@@ -7,8 +7,8 @@ input {
 //== form label
 %form-label {
   display: block;
-  font-weight: 500;
-  margin: 15px 0 4px;
+  font-weight: 700;
+  margin: 16px 0 2px;
   color: $color-text;
 }
 
@@ -59,6 +59,7 @@ select:-webkit-autofill {
   input.form-date,
   input.form-time,
   input.form-search,
+  input.form-url,
   select {
     height: 38px;
   }
@@ -71,9 +72,13 @@ select:-webkit-autofill {
   input:disabled {
     background-color: #eee;
   }
-  .description {
-    color: darken(white, 60%);
-    font-style: italic;
+  &__description {
+    color: darken(white, 40%);
+    font-size: 13px;
+    margin-bottom: 24px;
+    &#edit-field-kompanija--description {
+      margin-bottom: 56px;
+    }
   }
 }
 
@@ -104,17 +109,25 @@ input.form-file {
 //==fieldset
 fieldset:not(.fieldgroup) {
   border-radius: 3px;
-  border: 2px solid $color-ash;
-  padding: 24px;
+  border: 1px solid $color-ash;
+  padding: 48px 24px 24px;
   margin: 24px 0;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
   legend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     .fieldset-legend {
       display: block;
       font-weight: 500;
       padding: 0;
-      margin: 15px 10px 5px;
+      padding: 12px 24px;
+      background-color: $color-ash;
+      color: $color-text;
+      font-weight: 700;
     }
   }
   .form-type-checkbox {
@@ -265,7 +278,7 @@ fieldset:not(.fieldgroup) {
   color: white;
   border: none;
   width: auto;
-  padding: 10px 15px;
+  padding: 12px 18px;
   margin: 5px 0;
   transition: all 0.25s;
   display: inline-block;
@@ -275,7 +288,7 @@ fieldset:not(.fieldgroup) {
   font-weight: 500;
   &:hover,
   &:active {
-    background-color: darken($color-red, 5%);
+    background-color: darken($color-red, 10%);
   }
 }
 
@@ -317,12 +330,50 @@ fieldset:not(.fieldgroup) {
 }
 
 details {
-  margin-bottom: 24px;
+  margin: 24px 0;
+  border: 1px solid $color-ash;
+  border-radius: 3px;
   summary {
     background-color: $color-ash;
     color: $color-text;
     padding: 12px 24px;
-    border-radius: 3px;
     font-weight: 700;
+    border-radius: 3px;
+    &:focus {
+      outline: 0;
+    }
+  }
+  > div {
+    padding: 12px 24px 24px;
+  }
+  &[open] {
+    summary {
+      border-radius: 3px 3px 0 0;
+    }
+  }
+}
+
+.field-multiple-table {
+  border-radius: 3px;
+  border-color: $color-ash;
+  border-collapse: collapse;
+  th {
+    background-color: $color-ash;
+    border-radius: 3px;
+    padding: 14px 24px;
+    h4 {
+      font-family: $ubuntu;
+      color: $color-text;
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+  .field-multiple-drag {
+    padding: 0;
+    .tabledrag-handle {
+      margin: 0;
+      .handle {
+      }
+    }
   }
 }
