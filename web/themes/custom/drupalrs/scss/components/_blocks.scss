@@ -432,13 +432,13 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
     }
     &__row {
       flex-grow: 1;
       margin-bottom: 0;
       width: 100%;
-      margin-bottom: 24px;
+      margin: 0 6px 24px;
       @media #{$Narrow} {
         max-width: 49%;
         margin-bottom: 0;

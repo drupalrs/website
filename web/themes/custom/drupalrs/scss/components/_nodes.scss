@@ -167,7 +167,7 @@
   grid-row-gap: 15px;
   align-items: start;
   @media #{$Narrow} {
-    grid-template-columns: 145px 400px auto;
+    grid-template-columns: 210px 400px auto;
   }
   [class^="user-user"] {
     &[class$="label"] {
@@ -182,16 +182,17 @@
     }
   }
   &__column-1 {
-    margin-bottom: 24px;
+    margin: 0 0 12px 0;
     @media #{$Narrow} {
       margin-bottom: 0;
+      margin: 0 30px 0 0;
+      padding-right: 30px;
+      border-right: 2px solid $color-ash;
     }
   }
   &__column-2 {
     @media #{$Narrow} {
-      border-left: 2px solid $color-ash;
-      margin: 0 60px 0 30px;
-      padding-left: 30px;
+      margin: 0 60px 0 0;
     }
   }
   [class*="column"] {

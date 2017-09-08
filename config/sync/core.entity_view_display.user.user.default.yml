@@ -38,8 +38,6 @@ third_party_settings:
       label: 'U zajednici'
     group_opste_informacije:
       children:
-        - field_ime
-        - field_prezime
         - field_podaci
         - field_drupal_profil
         - field_socijalna_medija
@@ -65,14 +63,15 @@ third_party_settings:
       weight: 20
       format_type: html_element
       format_settings:
-        id: ''
-        classes: '&__column-3'
+        label: Posao
         element: div
         show_label: true
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: user-user-full__column-3
       label: Posao
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo

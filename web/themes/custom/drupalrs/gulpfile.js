@@ -1,24 +1,25 @@
 'use strict';
 
-var config			  = require('./config.js');
-var path 			    = require('path');
-var upath 			  = require('upath');
-var colors		  	= require('colors');
-var extend			  = require('extend');
-var browserSync	  = require('browser-sync');
-var gulp 			    = require('gulp');
-var sass 		   	  = require('gulp-sass');
-var sourcemaps  	= require('gulp-sourcemaps');
-var autoprefixer  = require('gulp-autoprefixer');
-var sassGlob 		  = require('gulp-sass-glob');
-var notify 		   	= require("gulp-notify");
-var gutil 		  	= require("gulp-util");
-var imagemin 		  = require('gulp-imagemin');
-var cleanCSS      = require('gulp-clean-css');
-var cssmin        = require('gulp-cssmin');
-var rename 			  = require('gulp-rename');
+var config = require('./config.js');
+var path = require('path');
+var upath = require('upath');
+var colors = require('colors');
+var extend = require('extend');
+var browserSync = require('browser-sync');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
+var sassGlob = require('gulp-sass-glob');
+var notify = require("gulp-notify");
+var gutil = require("gulp-util");
+var imagemin = require('gulp-imagemin');
+var cleanCSS = require('gulp-clean-css');
+var cssmin = require('gulp-cssmin');
+var rename = require('gulp-rename');
 var drupalBreakpoints = require('drupal-breakpoints-scss');
-var reload      	= browserSync.reload;
+var reload = browserSync.reload;
+var tap = require('gulp-tap');
 
 var themePath = '/themes/custom/' + config.theme + '/css/';
 var external = config.external;
@@ -26,6 +27,7 @@ var sassCfg = config.sass;
 var autoprefixerCfg = config.autoprefixer;
 var bsCfg = config.browserSync;
 console.log(themePath)
+
 // helper function for pretty priting copied files
 function copyLog(src, dest) {
     console.log('[' + colors.gray(new Date().toLocaleTimeString()) + ']' + ' Copied: ' + colors.yellow(path.basename(src)) + ' to ' + colors.green(dest));
@@ -40,7 +42,7 @@ function findDest(vf, p) {
         if (upath.normalize(vf.path).indexOf(p[i]) !== -1) {
             dest = external.dest[i];
             found = true;
-            break ;
+            break;
         }
     }
     return dest;
@@ -78,11 +80,11 @@ var reportError = function (error) {
 
 
 // copy any additional files required by theme
-gulp.task('cp', function() {
-    if (external === undefined) return ;
+gulp.task('cp', function () {
+    if (external === undefined) return;
     if (external.src === undefined && !(external.src instanceof Array) &&
-        external.dest === undefined && !(external.dest instanceof Array)) return ;
-    if (external.src.length !== external.dest.length) return ;
+        external.dest === undefined && !(external.dest instanceof Array)) return;
+    if (external.src.length !== external.dest.length) return;
 
     var cleanPaths = [],
         src = external.src;
@@ -100,9 +102,8 @@ gulp.task('cp', function() {
 });
 
 // run browser sync and watch for changes
-gulp.task('serve', ['cp', 'sass:prod'], function() {
+gulp.task('serve', ['cp', 'sass:prod'], function () {
     var bsConfig = extend(true, {}, bsCfg, {
-        files: [ sassCfg.dest ],
         rewriteRules: [{
             match: new RegExp(themePath, 'g'),
             fn: function (match) {
@@ -110,12 +111,11 @@ gulp.task('serve', ['cp', 'sass:prod'], function() {
                     startsWith = sassCfg.dest.substr(0, 1);
 
                 if (startsWith === '.') {
-                    path =  sassCfg.dest.slice(1);
+                    path = sassCfg.dest.slice(1);
                 }
                 else if (startsWith !== '/') {
                     path = '/' + sassCfg.dest;
                 }
-
                 return path;
             }
         }]
@@ -130,15 +130,21 @@ gulp.task('serve', ['cp', 'sass:prod'], function() {
 // task for building production version css
 // * autoprefixer
 gulp.task('sass:prod', function () {
-    gulp.src(sassCfg.src)
-        .pipe(sourcemaps.init())
+    return gulp.src(sassCfg.src)
         .pipe(sassGlob())
+        .pipe(sourcemaps.init())
         .pipe(sass({sourceComments: false}).on('error', sass.logError))
         .on('error', reportError)
         .pipe(autoprefixer(autoprefixerCfg))
         .pipe(cleanCSS({compatibility: 'ie11'}))
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(sassCfg.dest));
+        .pipe(sourcemaps.write('/'))
+        .pipe(gulp.dest(sassCfg.dest))
+        .pipe(tap(function (f, t) {
+            if (path.extname(f.path) === '.css') {
+                gulp.src(f.path)
+                    .pipe(reload({stream: true}));
+            }
+        }));
 });
 
 //add non-optimized images to the dist/images folder
@@ -154,7 +160,7 @@ gulp.task('image', function () {
 
 // task for building breakpoint scss in variables
 gulp.task('breakpoint', function () {
-    return gulp.src(path.resolve(__dirname, 'drupalrs.breakpoints.yml'))
+    return gulp.src(path.resolve(__dirname, 'dotlab.breakpoints.yml'))
         .pipe(drupalBreakpoints.ymlToScss())
         .pipe(rename('_breakpoints.scss'))
         .pipe(gulp.dest('./scss/variables/'))
