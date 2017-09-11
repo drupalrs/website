@@ -30,7 +30,7 @@ function drupalrs_preprocess_html(&$vars) {
 	$vars['current_path'] = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
 
 
-	$page = $vars['page'];
+  $page = $vars['page']; // @todo: This variable is never used. Remove!
 
   $theme = \Drupal::theme()->getActiveTheme()->getName();
 
