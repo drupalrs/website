@@ -35,7 +35,7 @@ function drupalrs_preprocess_html(&$vars) {
   $theme = \Drupal::theme()->getActiveTheme()->getName();
 
   $themes = \Drupal::service('theme_handler')->listInfo();
-  $defaultLayout = theme_get_setting('default_layout');
+  $defaultLayout = theme_get_setting('default_layout'); // @todo: This variable is never used. Remove!
   $themeSettings = $themes[$theme];
 
   // Display demo placeholder blocks for every region.
