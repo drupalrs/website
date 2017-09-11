@@ -1,12 +1,19 @@
-# The routes of the project.
-#
-# Each route describes how an incoming URL is going
-# to be processed by Platform.sh.
-
-"https://{default}/":
-    type: upstream
-    upstream: "app:http"
-
-"https://www.{default}/":
-    type: redirect
-    to: "https://{default}/"
+https://{default}/:
+  type: upstream
+  redirects:
+    expires: -1s
+    paths: {}
+  cache:
+    enabled: true
+    default_ttl: 300
+    cookies:
+    - SESS0168ad2ad0f52a55108dbc69adb423bd
+    headers:
+    - Accept
+    - Accept-Language
+  ssi:
+    enabled: false
+  upstream: app:http
+https://www.{default}/:
+  type: redirect
+  to: https://{default}/
