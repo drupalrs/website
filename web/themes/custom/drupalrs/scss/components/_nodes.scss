@@ -9,14 +9,7 @@
 }
 
 .node-kompanija-teaser {
-  &__content {
-
-  }
-  &__title {
-
-  }
-  &__title-link {
-  }
+  @include clearfix();
   &__field-webstranica,
   &__field-telefon,
   &__field-adresa {
@@ -30,10 +23,10 @@
     text-overflow: ellipsis;
   }
   &__field-adresa {
-    background-image: url("../images/version.svg");
+    background-image: url("../images/map.svg");
   }
   &__field-telefon {
-    background-image: url("../images/version.svg");
+    background-image: url("../images/phone.svg");
   }
   &__field-webstranica {
     background-image: url("../images/globe.svg");
@@ -167,17 +160,19 @@
   grid-row-gap: 15px;
   align-items: start;
   @media #{$Narrow} {
-    grid-template-columns: 210px 400px auto;
+    grid-template-columns: 204px 280px auto;
   }
   [class^="user-user"] {
+    font-weight: 500;
     &[class$="label"] {
-      font-weight: 500;
+      font-weight: 400;
+      font-size: 13px;
       margin-top: 18px;
-      margin-bottom: 2px;
+      opacity: 0.8;
     }
     &[class$="item"] {
       a {
-        font-style: italic;
+        font-weight: 500;
       }
     }
   }
@@ -185,21 +180,21 @@
     margin: 0 0 12px 0;
     @media #{$Narrow} {
       margin-bottom: 0;
-      margin: 0 30px 0 0;
-      padding-right: 30px;
+      margin: 0 28px 0 0;
+      padding-right: 24px;
       border-right: 2px solid $color-ash;
     }
   }
   &__column-2 {
     @media #{$Narrow} {
-      margin: 0 60px 0 0;
+      margin: 0 30px 0 0;
     }
   }
   [class*="column"] {
     h3 {
       color: $color-blue;
       font-weight: 700;
-      margin-bottom: 24px;
+      margin-bottom: 8px;
     }
   }
   &__user-picture {
@@ -207,8 +202,8 @@
   }
   .label {
     font-family: $ubuntu;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 400;
     color: $color-text;
   }
   &__field-drupal-profil {
@@ -759,6 +754,7 @@
   }
 }
 
+.context__03,
 .context__04 {
   .block-drupalrs-page-title {
     display: none;
