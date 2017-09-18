@@ -112,13 +112,11 @@
 
 .view-kompanije-page-1,
 .view-sajtovi-u-drupalu-page-1 {
-  &__content {
-    @include clearfix();
-  }
   &__rows {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
+    min-height: 372px;
   }
   &__row {
     box-sizing: border-box;
@@ -126,12 +124,13 @@
     border: 1px solid $color-ash;
     box-shadow: 0 2px 4px $color-ash;
     border-radius: 3px;
-    margin-bottom: 26px;
+    margin: 0 10px 24px;
+    flex-grow: 1;
     @media #{$Narrow} {
-      width: 48%;
+      max-width: 48%;
     }
     @media #{$Normal} {
-      width: 31%;
+      max-width: 31%;
     }
   }
 }
