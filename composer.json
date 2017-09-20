@@ -48,7 +48,7 @@
         "drupal/rules": "^3.0@alpha",
         "drupal/honeypot": "^1.27",
         "drupal/recaptcha": "^2.2",
-        "drupal/cyrillic_to_latin": "^1.0"
+        "drupal/cyrillic_to_latin": "^1.2"
     },
     "require-dev": {
         "behat/mink": "~1.7",
