@@ -41,7 +41,7 @@ content:
   field_adresa:
     weight: 38
     settings:
-      default_country: null
+      default_country: RS
     third_party_settings: {  }
     type: address_default
     region: content
