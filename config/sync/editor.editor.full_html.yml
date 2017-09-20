@@ -12,7 +12,7 @@ third_party_settings:
     status: true
     scheme: public
     directory: inline-files
-    extensions: txt
+    extensions: 'txt pdf'
 _core:
   default_config_hash: 967ijj7p6i7rwrYl7r08WQFeCY_c23YAh0h8u-w_CXM
 format: full_html
@@ -48,6 +48,7 @@ settings:
             - DrupalImage
             - Table
             - HorizontalRule
+            - DrupalFile
         -
           name: 'Block Formatting'
           items:
