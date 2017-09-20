@@ -89,6 +89,16 @@ function drupalrs_preprocess_html(&$vars) {
 }
 
 /**
+ * Implements THEME_preprocess_HOOK() for field.html.twig.
+ *
+ * @see hook_preprocess_HOOK()
+ * @see template_preprocess_page()
+ */
+function drupalrs_preprocess_page(&$variables) {
+  $variables['drupalrs']['current_year'] = date('Y');
+}
+
+/**
  * Implements hook_element_info_alter().
  */
 function drupalrs_element_info_alter(array &$types) {
