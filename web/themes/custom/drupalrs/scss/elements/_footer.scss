@@ -19,26 +19,18 @@
   }
 }
 
-.block-drupalrs20082017 {
-  margin-top: 36px;
-  text-align: center;
+.footer__bar {
   background-color: rgba(black, 0.2);
-  margin: 36px -12px 0;
-  &__content {
-    .block-content-basic-full__body {
-      p {
-        margin-bottom: 0;
-        height: 38px;
-        line-height: 38px;
-        color: #5389b6 !important;
-        font-size: 12px;
-      }
-    }
+  color: #5389b6;
+  font-size: 0.75rem;
+  margin-top: 36px;
+  padding: {
+    bottom: 10px;
+    top: 10px;
   }
-  @media #{$Narrow} {
-    margin: 36px 0 0;
-  }
+  text-align: center;
 }
+
 
 .block-prijavananewsletter {
   input[type="text"] {

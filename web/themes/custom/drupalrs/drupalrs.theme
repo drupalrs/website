@@ -11,11 +11,12 @@ use Drupal\Core\Template\Attribute;
 
 /**
 function drupalrs_css_alter(&$vars) {
-	$localhost = array('10.1.3.120', '91.150.66.201');
-		if (in_array($_SERVER['REMOTE_ADDR'], $localhost)) {
-			foreach ($vars as $key => $val) {
-			$vars[$key]['preprocess'] = FALSE;
-		}
+  // @todo: Remove this!
+  $localhost = array('10.1.3.120', '91.150.66.201');
+  if (in_array($_SERVER['REMOTE_ADDR'], $localhost)) {
+    foreach ($vars as $key => $val) {
+      $vars[$key]['preprocess'] = FALSE;
+    }
 	}
 }
 **/
@@ -29,12 +30,12 @@ function drupalrs_preprocess_html(&$vars) {
 	$vars['current_path'] = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
 
 
-	$page = $vars['page'];
+  $page = $vars['page']; // @todo: This variable is never used. Remove!
 
   $theme = \Drupal::theme()->getActiveTheme()->getName();
 
   $themes = \Drupal::service('theme_handler')->listInfo();
-  $defaultLayout = theme_get_setting('default_layout');
+  $defaultLayout = theme_get_setting('default_layout'); // @todo: This variable is never used. Remove!
   $themeSettings = $themes[$theme];
 
   // Display demo placeholder blocks for every region.
@@ -85,6 +86,16 @@ function drupalrs_preprocess_html(&$vars) {
       }
     }
   }
+}
+
+/**
+ * Implements THEME_preprocess_HOOK() for field.html.twig.
+ *
+ * @see hook_preprocess_HOOK()
+ * @see template_preprocess_page()
+ */
+function drupalrs_preprocess_page(&$variables) {
+  $variables['drupalrs']['current_year'] = date('Y');
 }
 
 /**
