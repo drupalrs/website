@@ -36,6 +36,17 @@ if (isset($_ENV['PLATFORM_RELATIONSHIPS'])) {
       }
     }
   }
+  // Memcache configuration.
+  if (!empty($relationships['cache'])) {
+    $cache = $relationships['cache'];
+
+    $settings['memcache']['servers'] = [$cache[0]['ip'] . ':' . $cache[0]['port'] => 'default'];
+    $settings['memcache']['bins'] = ['default' => 'default'];
+    $settings['memcache']['key_prefix'] = '';
+
+    // Enable memcache.
+    $settings['cache']['default'] = 'cache.backend.memcache';
+  }
 }
 
 if (isset($_ENV['PLATFORM_APP_DIR'])) {

@@ -103,3 +103,7 @@ crons:
     drupal:
         spec: '*/20 * * * *'
         cmd: 'cd web ; drush core-cron'
+# Extensions
+runtime:
+    extensions:
+        - memcached
