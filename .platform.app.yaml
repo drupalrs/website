@@ -6,6 +6,9 @@
 # The name of this app. Must be unique within a project.
 name: 'app'
 
+# Version of the app. Used for triggering build on the server.
+version: 1
+
 # The runtime the application uses.
 type: 'php:7.1'
 
