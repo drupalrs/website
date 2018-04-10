@@ -7,7 +7,7 @@
 name: 'app'
 
 # Version of the app. Used for triggering build on the server.
-version: 2
+version: 3
 
 # The runtime the application uses.
 type: 'php:7.1'
